@@ -279,7 +279,7 @@ __attribute__((swift_name("MiscService")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (void)getCallingCodesCompletion:(void (^)(BifrostResponseType *, NSArray<BifrostCallingCode *> *))completion __attribute__((swift_name("getCallingCodes(completion:)")));
-- (void)getLanguageCompletion:(void (^)(BifrostResponseType *, NSArray<BifrostLanguage *> *))completion __attribute__((swift_name("getLanguage(completion:)")));
+- (void)getLanguagesCompletion:(void (^)(BifrostResponseType *, NSArray<BifrostLanguage *> *))completion __attribute__((swift_name("getLanguages(completion:)")));
 @end;
 
 __attribute__((swift_name("KotlinComparable")))

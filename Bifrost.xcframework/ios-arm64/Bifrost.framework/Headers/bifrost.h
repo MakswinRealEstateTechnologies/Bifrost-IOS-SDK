@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class BifrostFragmentCallingCode, BifrostCallingCode, BifrostApollo_apiApolloResponse<D>, BifrostBaseService, BifrostResponseType, BifrostKotlinEnumCompanion, BifrostKotlinEnum<E>, BifrostKotlinArray<T>, BifrostApollo_apiCompiledField, BifrostApollo_apiCustomScalarAdapters, BifrostCallingCodesQueryCompanion, BifrostCallingCodesQueryData1, BifrostCallingCodesQueryCalling_codes, BifrostCallingCodesQueryData, BifrostCallingCodesQuery_ResponseAdapter, BifrostCallingCodesQuery_ResponseAdapterCalling_codes, BifrostCallingCodesQuery_ResponseAdapterData, BifrostCallingCodesQuery_ResponseAdapterData1, BifrostCallingCode_Companion, BifrostApollo_apiObjectType, BifrostCallingCodePaginatorCompanion, BifrostQueryCompanion, BifrostCallingCodesQuerySelections, BifrostApollo_apiCompiledSelection, BifrostFragmentCallingCodeImpl_ResponseAdapter, BifrostFragmentCallingCodeImpl_ResponseAdapterFragmentCallingCode, BifrostfragmentCallingCodeSelections, BifrostApollo_apiApolloResponseBuilder<D>, BifrostApollo_apiError, BifrostUuidUuid, BifrostKotlinThrowable, BifrostKotlinException, BifrostApollo_apiExecutableVariables, BifrostApollo_apiCompiledFieldBuilder, BifrostApollo_apiCompiledArgument, BifrostApollo_apiCompiledCondition, BifrostApollo_apiCompiledType, BifrostApollo_apiJsonNumber, BifrostApollo_apiCustomScalarAdaptersKey, BifrostApollo_apiCustomScalarAdaptersBuilder, BifrostApollo_apiCustomScalarType, BifrostKotlinNothing, BifrostApollo_apiJsonReaderToken, BifrostApollo_apiCompiledNamedType, BifrostApollo_apiInterfaceType, BifrostApollo_apiErrorLocation, BifrostKotlinByteArray, BifrostKotlinByteIterator, BifrostOkioByteString, BifrostOkioBuffer, BifrostOkioTimeout, BifrostApollo_apiCustomTypeValue<T>, BifrostOkioByteStringCompanion, BifrostOkioBufferUnsafeCursor, BifrostOkioTimeoutCompanion, BifrostApollo_apiCustomTypeValueCompanion;
+@class BifrostFragmentCallingCode, BifrostCallingCode, BifrostApollo_apiApolloRequest<D>, BifrostApollo_apiApolloResponse<D>, BifrostBaseService, BifrostResponseType, BifrostKotlinUnit, BifrostKotlinEnumCompanion, BifrostKotlinEnum<E>, BifrostKotlinArray<T>, BifrostApollo_apiCompiledField, BifrostApollo_apiCustomScalarAdapters, BifrostCallingCodesQueryCompanion, BifrostCallingCodesQueryData1, BifrostCallingCodesQueryCalling_codes, BifrostCallingCodesQueryData, BifrostCallingCodesQuery_ResponseAdapter, BifrostCallingCodesQuery_ResponseAdapterCalling_codes, BifrostCallingCodesQuery_ResponseAdapterData, BifrostCallingCodesQuery_ResponseAdapterData1, BifrostCallingCode_Companion, BifrostApollo_apiObjectType, BifrostCallingCodePaginatorCompanion, BifrostQueryCompanion, BifrostCallingCodesQuerySelections, BifrostApollo_apiCompiledSelection, BifrostFragmentCallingCodeImpl_ResponseAdapter, BifrostFragmentCallingCodeImpl_ResponseAdapterFragmentCallingCode, BifrostfragmentCallingCodeSelections, BifrostApollo_apiHttpHeader, BifrostApollo_apiHttpMethod, BifrostApollo_apiApolloRequestBuilder<D>, BifrostUuidUuid, BifrostKotlinThrowable, BifrostKotlinException, BifrostKotlinRuntimeException, BifrostKotlinIllegalStateException, BifrostApollo_apiApolloResponseBuilder<D>, BifrostApollo_apiError, BifrostApollo_apiExecutableVariables, BifrostApollo_apiCompiledFieldBuilder, BifrostApollo_apiCompiledArgument, BifrostApollo_apiCompiledCondition, BifrostApollo_apiCompiledType, BifrostApollo_apiJsonNumber, BifrostApollo_apiCustomScalarAdaptersKey, BifrostApollo_apiCustomScalarAdaptersBuilder, BifrostApollo_apiCustomScalarType, BifrostKotlinNothing, BifrostApollo_apiJsonReaderToken, BifrostApollo_apiCompiledNamedType, BifrostApollo_apiInterfaceType, BifrostKotlinByteArray, BifrostApollo_apiErrorLocation, BifrostKotlinByteIterator, BifrostOkioByteString, BifrostOkioBuffer, BifrostOkioTimeout, BifrostApollo_apiCustomTypeValue<T>, BifrostOkioByteStringCompanion, BifrostOkioBufferUnsafeCursor, BifrostOkioTimeoutCompanion, BifrostApollo_apiCustomTypeValueCompanion;
 
-@protocol BifrostApollo_apiQueryData, BifrostApollo_apiQuery, BifrostKotlinComparable, BifrostApollo_apiAdapter, BifrostApollo_apiJsonWriter, BifrostApollo_apiExecutable, BifrostApollo_apiOperation, BifrostApollo_apiExecutableData, BifrostApollo_apiOperationData, BifrostApollo_apiJsonReader, BifrostApollo_apiFragmentData, BifrostApollo_apiExecutionContext, BifrostKotlinIterator, BifrostApollo_apiUpload, BifrostOkioCloseable, BifrostApollo_apiExecutionContextKey, BifrostApollo_apiExecutionContextElement, BifrostOkioBufferedSink, BifrostApollo_apiCustomTypeAdapter, BifrostOkioSource, BifrostOkioSink, BifrostOkioBufferedSource;
+@protocol BifrostKotlinx_coroutines_coreFlow, BifrostApollo_apiOperationData, BifrostApollo_runtimeApolloInterceptorChain, BifrostApollo_runtimeApolloInterceptor, BifrostApollo_apiQueryData, BifrostApollo_apiQuery, BifrostKotlinComparable, BifrostApollo_apiAdapter, BifrostApollo_apiJsonWriter, BifrostApollo_apiExecutable, BifrostApollo_apiOperation, BifrostApollo_apiExecutableData, BifrostApollo_apiJsonReader, BifrostApollo_apiFragmentData, BifrostKotlinx_coroutines_coreFlowCollector, BifrostApollo_apiExecutionContext, BifrostApollo_apiExecutionOptions, BifrostKotlinIterator, BifrostApollo_apiUpload, BifrostOkioCloseable, BifrostApollo_apiExecutionContextKey, BifrostApollo_apiExecutionContextElement, BifrostApollo_apiMutableExecutionOptions, BifrostOkioBufferedSink, BifrostApollo_apiCustomTypeAdapter, BifrostOkioSource, BifrostOkioSink, BifrostOkioBufferedSource;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -165,12 +165,31 @@ __attribute__((swift_name("CallingCode")))
 @property NSString *value __attribute__((swift_name("value")));
 @end;
 
+__attribute__((swift_name("Apollo_runtimeApolloInterceptor")))
+@protocol BifrostApollo_runtimeApolloInterceptor
+@required
+- (id<BifrostKotlinx_coroutines_coreFlow>)interceptRequest:(BifrostApollo_apiApolloRequest<id<BifrostApollo_apiOperationData>> *)request chain:(id<BifrostApollo_runtimeApolloInterceptorChain>)chain __attribute__((swift_name("intercept(request:chain:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("AuthorizationInterceptor")))
+@interface BifrostAuthorizationInterceptor : BifrostBase <BifrostApollo_runtimeApolloInterceptor>
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (id<BifrostKotlinx_coroutines_coreFlow>)interceptRequest:(BifrostApollo_apiApolloRequest<id<BifrostApollo_apiOperationData>> *)request chain:(id<BifrostApollo_runtimeApolloInterceptorChain>)chain __attribute__((swift_name("intercept(request:chain:)")));
+@end;
+
 __attribute__((swift_name("BaseService")))
 @interface BifrostBaseService : BifrostBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (BOOL)checkResponseResponse:(BifrostApollo_apiApolloResponse<id<BifrostApollo_apiQueryData>> *)response __attribute__((swift_name("checkResponse(response:)")));
-- (void)executeQueryQuery:(id<BifrostApollo_apiQuery>)query completion:(void (^)(BifrostApollo_apiApolloResponse<id<BifrostApollo_apiQueryData>> *))completion __attribute__((swift_name("executeQuery(query:completion:)")));
+
+/**
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)executeQueryQuery:(id<BifrostApollo_apiQuery>)query completionHandler:(void (^)(BifrostApollo_apiApolloResponse<id<BifrostApollo_apiQueryData>> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("executeQuery(query:completionHandler:)")));
 @end;
 
 __attribute__((swift_name("GraphQLNetwork")))
@@ -184,7 +203,12 @@ __attribute__((swift_name("MiscService")))
 @interface BifrostMiscService : BifrostBaseService
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (void)getCallingCodesCompletion:(void (^)(BifrostResponseType *, NSArray<BifrostCallingCode *> *))completion __attribute__((swift_name("getCallingCodes(completion:)")));
+
+/**
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)getCallingCodesCompletion:(void (^)(BifrostResponseType *, NSArray<BifrostCallingCode *> *))completion completionHandler:(void (^)(BifrostKotlinUnit * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getCallingCodes(completion:completionHandler:)")));
 @end;
 
 __attribute__((swift_name("KotlinComparable")))
@@ -548,39 +572,48 @@ __attribute__((swift_name("fragmentCallingCodeSelections")))
 @property (readonly) NSArray<BifrostApollo_apiCompiledSelection *> *root __attribute__((swift_name("root")));
 @end;
 
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Apollo_apiApolloResponse")))
-@interface BifrostApollo_apiApolloResponse<D> : BifrostBase
-- (BOOL)hasErrors __attribute__((swift_name("hasErrors()")));
-- (BifrostApollo_apiApolloResponseBuilder<D> *)doNewBuilder __attribute__((swift_name("doNewBuilder()")));
-@property (readonly) D _Nullable data __attribute__((swift_name("data")));
-@property (readonly) D dataAssertNoErrors __attribute__((swift_name("dataAssertNoErrors")));
-@property (readonly) NSArray<BifrostApollo_apiError *> * _Nullable errors __attribute__((swift_name("errors")));
+__attribute__((swift_name("Kotlinx_coroutines_coreFlow")))
+@protocol BifrostKotlinx_coroutines_coreFlow
+@required
+
+/**
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)collectCollector:(id<BifrostKotlinx_coroutines_coreFlowCollector>)collector completionHandler:(void (^)(BifrostKotlinUnit * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("collect(collector:completionHandler:)")));
+@end;
+
+__attribute__((swift_name("Apollo_apiExecutionOptions")))
+@protocol BifrostApollo_apiExecutionOptions
+@required
+@property (readonly) BifrostBoolean * _Nullable canBeBatched __attribute__((swift_name("canBeBatched")));
+@property (readonly) BifrostBoolean * _Nullable enableAutoPersistedQueries __attribute__((swift_name("enableAutoPersistedQueries")));
 @property (readonly) id<BifrostApollo_apiExecutionContext> executionContext __attribute__((swift_name("executionContext")));
-@property (readonly) NSDictionary<NSString *, id> *extensions __attribute__((swift_name("extensions")));
+@property (readonly) NSArray<BifrostApollo_apiHttpHeader *> * _Nullable httpHeaders __attribute__((swift_name("httpHeaders")));
+@property (readonly) BifrostApollo_apiHttpMethod * _Nullable httpMethod __attribute__((swift_name("httpMethod")));
+@property (readonly) BifrostBoolean * _Nullable sendApqExtensions __attribute__((swift_name("sendApqExtensions")));
+@property (readonly) BifrostBoolean * _Nullable sendDocument __attribute__((swift_name("sendDocument")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Apollo_apiApolloRequest")))
+@interface BifrostApollo_apiApolloRequest<D> : BifrostBase <BifrostApollo_apiExecutionOptions>
+- (BifrostApollo_apiApolloRequestBuilder<D> *)doNewBuilder __attribute__((swift_name("doNewBuilder()")));
+@property (readonly) BifrostBoolean * _Nullable canBeBatched __attribute__((swift_name("canBeBatched")));
+@property (readonly) BifrostBoolean * _Nullable enableAutoPersistedQueries __attribute__((swift_name("enableAutoPersistedQueries")));
+@property (readonly) id<BifrostApollo_apiExecutionContext> executionContext __attribute__((swift_name("executionContext")));
+@property (readonly) NSArray<BifrostApollo_apiHttpHeader *> * _Nullable httpHeaders __attribute__((swift_name("httpHeaders")));
+@property (readonly) BifrostApollo_apiHttpMethod * _Nullable httpMethod __attribute__((swift_name("httpMethod")));
 @property (readonly) id<BifrostApollo_apiOperation> operation __attribute__((swift_name("operation")));
 @property (readonly) BifrostUuidUuid *requestUuid __attribute__((swift_name("requestUuid")));
+@property (readonly) BifrostBoolean * _Nullable sendApqExtensions __attribute__((swift_name("sendApqExtensions")));
+@property (readonly) BifrostBoolean * _Nullable sendDocument __attribute__((swift_name("sendDocument")));
 @end;
 
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinEnumCompanion")))
-@interface BifrostKotlinEnumCompanion : BifrostBase
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-+ (instancetype)companion __attribute__((swift_name("init()")));
-@property (class, readonly, getter=shared) BifrostKotlinEnumCompanion *shared __attribute__((swift_name("shared")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinArray")))
-@interface BifrostKotlinArray<T> : BifrostBase
-+ (instancetype)arrayWithSize:(int32_t)size init:(T _Nullable (^)(BifrostInt *))init __attribute__((swift_name("init(size:init:)")));
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-- (T _Nullable)getIndex:(int32_t)index __attribute__((swift_name("get(index:)")));
-- (id<BifrostKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
-- (void)setIndex:(int32_t)index value:(T _Nullable)value __attribute__((swift_name("set(index:value:)")));
-@property (readonly) int32_t size __attribute__((swift_name("size")));
+__attribute__((swift_name("Apollo_runtimeApolloInterceptorChain")))
+@protocol BifrostApollo_runtimeApolloInterceptorChain
+@required
+- (id<BifrostKotlinx_coroutines_coreFlow>)proceedRequest:(BifrostApollo_apiApolloRequest<id<BifrostApollo_apiOperationData>> *)request __attribute__((swift_name("proceed(request:)")));
 @end;
 
 __attribute__((swift_name("KotlinThrowable")))
@@ -605,6 +638,78 @@ __attribute__((swift_name("KotlinException")))
 - (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithCause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
+@end;
+
+__attribute__((swift_name("KotlinRuntimeException")))
+@interface BifrostKotlinRuntimeException : BifrostKotlinException
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithMessage:(NSString * _Nullable)message cause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithCause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
+@end;
+
+__attribute__((swift_name("KotlinIllegalStateException")))
+@interface BifrostKotlinIllegalStateException : BifrostKotlinRuntimeException
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithMessage:(NSString * _Nullable)message cause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithCause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
+@end;
+
+__attribute__((swift_name("KotlinCancellationException")))
+@interface BifrostKotlinCancellationException : BifrostKotlinIllegalStateException
+- (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
++ (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithMessage:(NSString * _Nullable)message cause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithCause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Apollo_apiApolloResponse")))
+@interface BifrostApollo_apiApolloResponse<D> : BifrostBase
+- (BOOL)hasErrors __attribute__((swift_name("hasErrors()")));
+- (BifrostApollo_apiApolloResponseBuilder<D> *)doNewBuilder __attribute__((swift_name("doNewBuilder()")));
+@property (readonly) D _Nullable data __attribute__((swift_name("data")));
+@property (readonly) D dataAssertNoErrors __attribute__((swift_name("dataAssertNoErrors")));
+@property (readonly) NSArray<BifrostApollo_apiError *> * _Nullable errors __attribute__((swift_name("errors")));
+@property (readonly) id<BifrostApollo_apiExecutionContext> executionContext __attribute__((swift_name("executionContext")));
+@property (readonly) NSDictionary<NSString *, id> *extensions __attribute__((swift_name("extensions")));
+@property (readonly) id<BifrostApollo_apiOperation> operation __attribute__((swift_name("operation")));
+@property (readonly) BifrostUuidUuid *requestUuid __attribute__((swift_name("requestUuid")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("KotlinUnit")))
+@interface BifrostKotlinUnit : BifrostBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)unit __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) BifrostKotlinUnit *shared __attribute__((swift_name("shared")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("KotlinEnumCompanion")))
+@interface BifrostKotlinEnumCompanion : BifrostBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+@property (class, readonly, getter=shared) BifrostKotlinEnumCompanion *shared __attribute__((swift_name("shared")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("KotlinArray")))
+@interface BifrostKotlinArray<T> : BifrostBase
++ (instancetype)arrayWithSize:(int32_t)size init:(T _Nullable (^)(BifrostInt *))init __attribute__((swift_name("init(size:init:)")));
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (T _Nullable)getIndex:(int32_t)index __attribute__((swift_name("get(index:)")));
+- (id<BifrostKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
+- (void)setIndex:(int32_t)index value:(T _Nullable)value __attribute__((swift_name("set(index:value:)")));
+@property (readonly) int32_t size __attribute__((swift_name("size")));
 @end;
 
 __attribute__((swift_name("OkioIOException")))
@@ -891,6 +996,86 @@ __attribute__((swift_name("Apollo_apiObjectType")))
 @property (readonly) NSArray<NSString *> *keyFields __attribute__((swift_name("keyFields")));
 @end;
 
+__attribute__((swift_name("Kotlinx_coroutines_coreFlowCollector")))
+@protocol BifrostKotlinx_coroutines_coreFlowCollector
+@required
+
+/**
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
+*/
+- (void)emitValue:(id _Nullable)value completionHandler:(void (^)(BifrostKotlinUnit * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("emit(value:completionHandler:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Apollo_apiHttpHeader")))
+@interface BifrostApollo_apiHttpHeader : BifrostBase
+- (instancetype)initWithName:(NSString *)name value:(NSString *)value __attribute__((swift_name("init(name:value:)"))) __attribute__((objc_designated_initializer));
+@property (readonly) NSString *name __attribute__((swift_name("name")));
+@property (readonly) NSString *value __attribute__((swift_name("value")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Apollo_apiHttpMethod")))
+@interface BifrostApollo_apiHttpMethod : BifrostKotlinEnum<BifrostApollo_apiHttpMethod *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (class, readonly) BifrostApollo_apiHttpMethod *get __attribute__((swift_name("get")));
+@property (class, readonly) BifrostApollo_apiHttpMethod *post __attribute__((swift_name("post")));
++ (BifrostKotlinArray<BifrostApollo_apiHttpMethod *> *)values __attribute__((swift_name("values()")));
+@end;
+
+__attribute__((swift_name("Apollo_apiMutableExecutionOptions")))
+@protocol BifrostApollo_apiMutableExecutionOptions <BifrostApollo_apiExecutionOptions>
+@required
+- (id _Nullable)addExecutionContextExecutionContext:(id<BifrostApollo_apiExecutionContext>)executionContext __attribute__((swift_name("addExecutionContext(executionContext:)")));
+- (id _Nullable)addHttpHeaderName:(NSString *)name value:(NSString *)value __attribute__((swift_name("addHttpHeader(name:value:)")));
+- (id _Nullable)canBeBatchedCanBeBatched:(BifrostBoolean * _Nullable)canBeBatched __attribute__((swift_name("canBeBatched(canBeBatched:)")));
+- (id _Nullable)enableAutoPersistedQueriesEnableAutoPersistedQueries:(BifrostBoolean * _Nullable)enableAutoPersistedQueries __attribute__((swift_name("enableAutoPersistedQueries(enableAutoPersistedQueries:)")));
+- (id _Nullable)httpHeadersHttpHeaders:(NSArray<BifrostApollo_apiHttpHeader *> * _Nullable)httpHeaders __attribute__((swift_name("httpHeaders(httpHeaders:)")));
+- (id _Nullable)httpMethodHttpMethod:(BifrostApollo_apiHttpMethod * _Nullable)httpMethod __attribute__((swift_name("httpMethod(httpMethod:)")));
+- (id _Nullable)sendApqExtensionsSendApqExtensions:(BifrostBoolean * _Nullable)sendApqExtensions __attribute__((swift_name("sendApqExtensions(sendApqExtensions:)")));
+- (id _Nullable)sendDocumentSendDocument:(BifrostBoolean * _Nullable)sendDocument __attribute__((swift_name("sendDocument(sendDocument:)")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Apollo_apiApolloRequestBuilder")))
+@interface BifrostApollo_apiApolloRequestBuilder<D> : BifrostBase <BifrostApollo_apiMutableExecutionOptions>
+- (instancetype)initWithOperation:(id<BifrostApollo_apiOperation>)operation __attribute__((swift_name("init(operation:)"))) __attribute__((objc_designated_initializer));
+- (BifrostApollo_apiApolloRequestBuilder<D> *)addExecutionContextExecutionContext:(id<BifrostApollo_apiExecutionContext>)executionContext __attribute__((swift_name("addExecutionContext(executionContext:)")));
+- (BifrostApollo_apiApolloRequestBuilder<D> *)addHttpHeaderName:(NSString *)name value:(NSString *)value __attribute__((swift_name("addHttpHeader(name:value:)")));
+- (BifrostApollo_apiApolloRequest<D> *)build __attribute__((swift_name("build()")));
+- (BifrostApollo_apiApolloRequestBuilder<D> *)canBeBatchedCanBeBatched:(BifrostBoolean * _Nullable)canBeBatched __attribute__((swift_name("canBeBatched(canBeBatched:)")));
+- (BifrostApollo_apiApolloRequestBuilder<D> *)enableAutoPersistedQueriesEnableAutoPersistedQueries:(BifrostBoolean * _Nullable)enableAutoPersistedQueries __attribute__((swift_name("enableAutoPersistedQueries(enableAutoPersistedQueries:)")));
+- (BifrostApollo_apiApolloRequestBuilder<D> *)executionContextExecutionContext:(id<BifrostApollo_apiExecutionContext>)executionContext __attribute__((swift_name("executionContext(executionContext:)")));
+- (BifrostApollo_apiApolloRequestBuilder<D> *)httpHeadersHttpHeaders:(NSArray<BifrostApollo_apiHttpHeader *> * _Nullable)httpHeaders __attribute__((swift_name("httpHeaders(httpHeaders:)")));
+- (BifrostApollo_apiApolloRequestBuilder<D> *)httpMethodHttpMethod:(BifrostApollo_apiHttpMethod * _Nullable)httpMethod __attribute__((swift_name("httpMethod(httpMethod:)")));
+- (BifrostApollo_apiApolloRequestBuilder<D> *)requestUuidRequestUuid:(BifrostUuidUuid *)requestUuid __attribute__((swift_name("requestUuid(requestUuid:)")));
+- (BifrostApollo_apiApolloRequestBuilder<D> *)sendApqExtensionsSendApqExtensions:(BifrostBoolean * _Nullable)sendApqExtensions __attribute__((swift_name("sendApqExtensions(sendApqExtensions:)")));
+- (BifrostApollo_apiApolloRequestBuilder<D> *)sendDocumentSendDocument:(BifrostBoolean * _Nullable)sendDocument __attribute__((swift_name("sendDocument(sendDocument:)")));
+@property BifrostBoolean * _Nullable canBeBatched __attribute__((swift_name("canBeBatched")));
+@property BifrostBoolean * _Nullable enableAutoPersistedQueries __attribute__((swift_name("enableAutoPersistedQueries")));
+@property id<BifrostApollo_apiExecutionContext> executionContext __attribute__((swift_name("executionContext")));
+@property NSArray<BifrostApollo_apiHttpHeader *> * _Nullable httpHeaders __attribute__((swift_name("httpHeaders")));
+@property BifrostApollo_apiHttpMethod * _Nullable httpMethod __attribute__((swift_name("httpMethod")));
+@property BifrostBoolean * _Nullable sendApqExtensions __attribute__((swift_name("sendApqExtensions")));
+@property BifrostBoolean * _Nullable sendDocument __attribute__((swift_name("sendDocument")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("UuidUuid")))
+@interface BifrostUuidUuid : BifrostBase <BifrostKotlinComparable>
+- (instancetype)initWithMsb:(int64_t)msb lsb:(int64_t)lsb __attribute__((swift_name("init(msb:lsb:)"))) __attribute__((objc_designated_initializer));
+- (instancetype)initWithUuidBytes:(BifrostKotlinByteArray *)uuidBytes __attribute__((swift_name("init(uuidBytes:)"))) __attribute__((objc_designated_initializer)) __attribute__((deprecated("Use `uuidOf` instead.")));
+- (int32_t)compareToOther:(BifrostUuidUuid *)other __attribute__((swift_name("compareTo(other:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) int64_t leastSignificantBits __attribute__((swift_name("leastSignificantBits")));
+@property (readonly) int64_t mostSignificantBits __attribute__((swift_name("mostSignificantBits")));
+@end;
+
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiApolloResponseBuilder")))
 @interface BifrostApollo_apiApolloResponseBuilder<D> : BifrostBase
@@ -913,19 +1098,6 @@ __attribute__((swift_name("Apollo_apiError")))
 @property (readonly) NSString *message __attribute__((swift_name("message")));
 @property (readonly) NSDictionary<NSString *, id> * _Nullable nonStandardFields __attribute__((swift_name("nonStandardFields")));
 @property (readonly) NSArray<id> * _Nullable path __attribute__((swift_name("path")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("UuidUuid")))
-@interface BifrostUuidUuid : BifrostBase <BifrostKotlinComparable>
-- (instancetype)initWithMsb:(int64_t)msb lsb:(int64_t)lsb __attribute__((swift_name("init(msb:lsb:)"))) __attribute__((objc_designated_initializer));
-- (instancetype)initWithUuidBytes:(BifrostKotlinByteArray *)uuidBytes __attribute__((swift_name("init(uuidBytes:)"))) __attribute__((objc_designated_initializer)) __attribute__((deprecated("Use `uuidOf` instead.")));
-- (int32_t)compareToOther:(BifrostUuidUuid *)other __attribute__((swift_name("compareTo(other:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) int64_t leastSignificantBits __attribute__((swift_name("leastSignificantBits")));
-@property (readonly) int64_t mostSignificantBits __attribute__((swift_name("mostSignificantBits")));
 @end;
 
 __attribute__((swift_name("KotlinIterator")))
@@ -1065,15 +1237,6 @@ __attribute__((swift_name("Apollo_apiInterfaceType")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("Apollo_apiError.Location")))
-@interface BifrostApollo_apiErrorLocation : BifrostBase
-- (instancetype)initWithLine:(int32_t)line column:(int32_t)column __attribute__((swift_name("init(line:column:)"))) __attribute__((objc_designated_initializer));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) int32_t column __attribute__((swift_name("column")));
-@property (readonly) int32_t line __attribute__((swift_name("line")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinByteArray")))
 @interface BifrostKotlinByteArray : BifrostBase
 + (instancetype)arrayWithSize:(int32_t)size __attribute__((swift_name("init(size:)")));
@@ -1084,6 +1247,15 @@ __attribute__((swift_name("KotlinByteArray")))
 - (BifrostKotlinByteIterator *)iterator __attribute__((swift_name("iterator()")));
 - (void)setIndex:(int32_t)index value:(int8_t)value __attribute__((swift_name("set(index:value:)")));
 @property (readonly) int32_t size __attribute__((swift_name("size")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("Apollo_apiError.Location")))
+@interface BifrostApollo_apiErrorLocation : BifrostBase
+- (instancetype)initWithLine:(int32_t)line column:(int32_t)column __attribute__((swift_name("init(line:column:)"))) __attribute__((objc_designated_initializer));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) int32_t column __attribute__((swift_name("column")));
+@property (readonly) int32_t line __attribute__((swift_name("line")));
 @end;
 
 __attribute__((swift_name("OkioSink")))

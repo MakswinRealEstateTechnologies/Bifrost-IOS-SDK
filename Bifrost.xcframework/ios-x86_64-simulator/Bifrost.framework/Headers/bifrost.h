@@ -210,6 +210,7 @@ __attribute__((swift_name("MiscService")))
 */
 - (void)getCallingCodesCompletion:(void (^)(BifrostResponseType *, NSArray<BifrostCallingCode *> *))completion completionHandler:(void (^)(BifrostKotlinUnit * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("getCallingCodes(completion:completionHandler:)")));
 - (void)testUgur __attribute__((swift_name("testUgur()")));
+- (void)testUgur2 __attribute__((swift_name("testUgur2()")));
 @end;
 
 __attribute__((swift_name("KotlinComparable")))

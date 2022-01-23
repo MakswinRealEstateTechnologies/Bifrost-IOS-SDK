@@ -203,7 +203,7 @@ __attribute__((swift_name("MiscService")))
 @interface BifrostMiscService : BifrostBaseService
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-- (void)asdkslajdksaCompletion:(void (^)(BifrostResponseType *, NSArray<BifrostCallingCode *> *))completion __attribute__((swift_name("asdkslajdksa(completion:)")));
+- (void)veveCompletion:(void (^)(BifrostResponseType *, NSArray<BifrostCallingCode *> *))completion __attribute__((swift_name("veve(completion:)")));
 @property (readonly) id<BifrostKotlinx_coroutines_coreCoroutineScope> scope __attribute__((swift_name("scope")));
 @end;
 

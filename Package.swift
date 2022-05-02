@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "Bifrost",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v10)
     ],
     products: [
         .library(

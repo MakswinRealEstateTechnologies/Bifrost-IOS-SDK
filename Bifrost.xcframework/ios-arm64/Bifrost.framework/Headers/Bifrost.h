@@ -2238,12 +2238,6 @@ __attribute__((swift_name("Apollo_apiApolloResponse")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("LoggerKt")))
-@interface BifrostLoggerKt : BifrostBase
-+ (void)logMsg:(NSString *)msg __attribute__((swift_name("log(msg:)")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CommonFlowKt")))
 @interface BifrostCommonFlowKt : BifrostBase
 + (BifrostCommonFlow<id> *)asCommonFlow:(id<BifrostKotlinx_coroutines_coreFlow>)receiver __attribute__((swift_name("asCommonFlow(_:)")));

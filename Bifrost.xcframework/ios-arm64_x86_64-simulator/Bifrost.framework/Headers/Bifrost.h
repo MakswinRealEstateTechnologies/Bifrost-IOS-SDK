@@ -27,22 +27,22 @@ __attribute__((swift_name("KotlinBase")))
 - (instancetype)init __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
 + (void)initialize __attribute__((objc_requires_super));
-@end
+@end;
 
 @interface BifrostBase (BifrostBaseCopying) <NSCopying>
-@end
+@end;
 
 __attribute__((swift_name("KotlinMutableSet")))
 @interface BifrostMutableSet<ObjectType> : NSMutableSet<ObjectType>
-@end
+@end;
 
 __attribute__((swift_name("KotlinMutableDictionary")))
 @interface BifrostMutableDictionary<KeyType, ObjectType> : NSMutableDictionary<KeyType, ObjectType>
-@end
+@end;
 
 @interface NSError (NSErrorBifrostKotlinException)
 @property (readonly) id _Nullable kotlinException;
-@end
+@end;
 
 __attribute__((swift_name("KotlinNumber")))
 @interface BifrostNumber : NSNumber
@@ -76,81 +76,73 @@ __attribute__((swift_name("KotlinNumber")))
 + (instancetype)numberWithBool:(BOOL)value __attribute__((unavailable));
 + (instancetype)numberWithInteger:(NSInteger)value __attribute__((unavailable));
 + (instancetype)numberWithUnsignedInteger:(NSUInteger)value __attribute__((unavailable));
-@end
+@end;
 
 __attribute__((swift_name("KotlinByte")))
 @interface BifrostByte : BifrostNumber
 - (instancetype)initWithChar:(char)value;
 + (instancetype)numberWithChar:(char)value;
-@end
+@end;
 
 __attribute__((swift_name("KotlinUByte")))
 @interface BifrostUByte : BifrostNumber
 - (instancetype)initWithUnsignedChar:(unsigned char)value;
 + (instancetype)numberWithUnsignedChar:(unsigned char)value;
-@end
+@end;
 
 __attribute__((swift_name("KotlinShort")))
 @interface BifrostShort : BifrostNumber
 - (instancetype)initWithShort:(short)value;
 + (instancetype)numberWithShort:(short)value;
-@end
+@end;
 
 __attribute__((swift_name("KotlinUShort")))
 @interface BifrostUShort : BifrostNumber
 - (instancetype)initWithUnsignedShort:(unsigned short)value;
 + (instancetype)numberWithUnsignedShort:(unsigned short)value;
-@end
+@end;
 
 __attribute__((swift_name("KotlinInt")))
 @interface BifrostInt : BifrostNumber
 - (instancetype)initWithInt:(int)value;
 + (instancetype)numberWithInt:(int)value;
-@end
+@end;
 
 __attribute__((swift_name("KotlinUInt")))
 @interface BifrostUInt : BifrostNumber
 - (instancetype)initWithUnsignedInt:(unsigned int)value;
 + (instancetype)numberWithUnsignedInt:(unsigned int)value;
-@end
+@end;
 
 __attribute__((swift_name("KotlinLong")))
 @interface BifrostLong : BifrostNumber
 - (instancetype)initWithLongLong:(long long)value;
 + (instancetype)numberWithLongLong:(long long)value;
-@end
+@end;
 
 __attribute__((swift_name("KotlinULong")))
 @interface BifrostULong : BifrostNumber
 - (instancetype)initWithUnsignedLongLong:(unsigned long long)value;
 + (instancetype)numberWithUnsignedLongLong:(unsigned long long)value;
-@end
+@end;
 
 __attribute__((swift_name("KotlinFloat")))
 @interface BifrostFloat : BifrostNumber
 - (instancetype)initWithFloat:(float)value;
 + (instancetype)numberWithFloat:(float)value;
-@end
+@end;
 
 __attribute__((swift_name("KotlinDouble")))
 @interface BifrostDouble : BifrostNumber
 - (instancetype)initWithDouble:(double)value;
 + (instancetype)numberWithDouble:(double)value;
-@end
+@end;
 
 __attribute__((swift_name("KotlinBoolean")))
 @interface BifrostBoolean : BifrostNumber
 - (instancetype)initWithBool:(BOOL)value;
 + (instancetype)numberWithBool:(BOOL)value;
-@end
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KMPDate")))
-@interface BifrostKMPDate : BifrostBase
-- (instancetype)initWithFormatString:(NSString *)formatString __attribute__((swift_name("init(formatString:)"))) __attribute__((objc_designated_initializer));
-- (NSString *)getCurrentDate __attribute__((swift_name("getCurrentDate()")));
-- (NSString *)parseDateDate:(NSString *)date __attribute__((swift_name("parseDate(date:)")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiExecutable")))
 @protocol BifrostApollo_apiExecutable
@@ -159,11 +151,11 @@ __attribute__((swift_name("Apollo_apiExecutable")))
 - (BifrostApollo_apiCompiledField *)rootField __attribute__((swift_name("rootField()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)serializeVariablesWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("serializeVariables(writer:customScalarAdapters:)")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiOperation")))
 @protocol BifrostApollo_apiOperation <BifrostApollo_apiExecutable>
@@ -171,12 +163,12 @@ __attribute__((swift_name("Apollo_apiOperation")))
 - (NSString *)document __attribute__((swift_name("document()")));
 - (NSString *)id __attribute__((swift_name("id()")));
 - (NSString *)name __attribute__((swift_name("name()")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiMutation")))
 @protocol BifrostApollo_apiMutation <BifrostApollo_apiOperation>
 @required
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AddFeedbackMutation")))
@@ -194,13 +186,13 @@ __attribute__((swift_name("AddFeedbackMutation")))
 - (BifrostApollo_apiCompiledField *)rootField __attribute__((swift_name("rootField()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)serializeVariablesWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("serializeVariables(writer:customScalarAdapters:)")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) BifrostAddFeedbackInput *input __attribute__((swift_name("input")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AddFeedbackMutation.AddFeedback")))
@@ -212,7 +204,7 @@ __attribute__((swift_name("AddFeedbackMutation.AddFeedback")))
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *note __attribute__((swift_name("note")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AddFeedbackMutation.Companion")))
@@ -224,22 +216,22 @@ __attribute__((swift_name("AddFeedbackMutation.Companion")))
 @property (readonly) NSString *OPERATION_DOCUMENT __attribute__((swift_name("OPERATION_DOCUMENT")));
 @property (readonly) NSString *OPERATION_ID __attribute__((swift_name("OPERATION_ID")));
 @property (readonly) NSString *OPERATION_NAME __attribute__((swift_name("OPERATION_NAME")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiExecutableData")))
 @protocol BifrostApollo_apiExecutableData
 @required
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiOperationData")))
 @protocol BifrostApollo_apiOperationData <BifrostApollo_apiExecutableData>
 @required
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiMutationData")))
 @protocol BifrostApollo_apiMutationData <BifrostApollo_apiOperationData>
 @required
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AddFeedbackMutation.Data")))
@@ -251,7 +243,7 @@ __attribute__((swift_name("AddFeedbackMutation.Data")))
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) BifrostAddFeedbackMutationAddFeedback * _Nullable addFeedback __attribute__((swift_name("addFeedback")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ForgotPasswordOTPMutation")))
@@ -269,13 +261,13 @@ __attribute__((swift_name("ForgotPasswordOTPMutation")))
 - (BifrostApollo_apiCompiledField *)rootField __attribute__((swift_name("rootField()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)serializeVariablesWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("serializeVariables(writer:customScalarAdapters:)")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *cell_phone __attribute__((swift_name("cell_phone")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ForgotPasswordOTPMutation.Companion")))
@@ -287,7 +279,7 @@ __attribute__((swift_name("ForgotPasswordOTPMutation.Companion")))
 @property (readonly) NSString *OPERATION_DOCUMENT __attribute__((swift_name("OPERATION_DOCUMENT")));
 @property (readonly) NSString *OPERATION_ID __attribute__((swift_name("OPERATION_ID")));
 @property (readonly) NSString *OPERATION_NAME __attribute__((swift_name("OPERATION_NAME")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ForgotPasswordOTPMutation.Data")))
@@ -299,7 +291,7 @@ __attribute__((swift_name("ForgotPasswordOTPMutation.Data")))
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) BifrostForgotPasswordOTPMutationForgotPasswordOTP *forgotPasswordOTP __attribute__((swift_name("forgotPasswordOTP")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ForgotPasswordOTPMutation.ForgotPasswordOTP")))
@@ -311,7 +303,7 @@ __attribute__((swift_name("ForgotPasswordOTPMutation.ForgotPasswordOTP")))
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *status __attribute__((swift_name("status")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LogOutMutation")))
@@ -328,11 +320,11 @@ __attribute__((swift_name("LogOutMutation")))
 - (BifrostApollo_apiCompiledField *)rootField __attribute__((swift_name("rootField()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)serializeVariablesWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("serializeVariables(writer:customScalarAdapters:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LogOutMutation.Companion")))
@@ -344,7 +336,7 @@ __attribute__((swift_name("LogOutMutation.Companion")))
 @property (readonly) NSString *OPERATION_DOCUMENT __attribute__((swift_name("OPERATION_DOCUMENT")));
 @property (readonly) NSString *OPERATION_ID __attribute__((swift_name("OPERATION_ID")));
 @property (readonly) NSString *OPERATION_NAME __attribute__((swift_name("OPERATION_NAME")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LogOutMutation.Data")))
@@ -356,7 +348,7 @@ __attribute__((swift_name("LogOutMutation.Data")))
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) BifrostLogOutMutationLogout *logout __attribute__((swift_name("logout")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LogOutMutation.Logout")))
@@ -368,7 +360,7 @@ __attribute__((swift_name("LogOutMutation.Logout")))
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *status __attribute__((swift_name("status")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LoginMutation")))
@@ -387,14 +379,14 @@ __attribute__((swift_name("LoginMutation")))
 - (BifrostApollo_apiCompiledField *)rootField __attribute__((swift_name("rootField()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)serializeVariablesWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("serializeVariables(writer:customScalarAdapters:)")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *cellPhone __attribute__((swift_name("cellPhone")));
 @property (readonly) NSString *password __attribute__((swift_name("password")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LoginMutation.Companion")))
@@ -406,7 +398,7 @@ __attribute__((swift_name("LoginMutation.Companion")))
 @property (readonly) NSString *OPERATION_DOCUMENT __attribute__((swift_name("OPERATION_DOCUMENT")));
 @property (readonly) NSString *OPERATION_ID __attribute__((swift_name("OPERATION_ID")));
 @property (readonly) NSString *OPERATION_NAME __attribute__((swift_name("OPERATION_NAME")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LoginMutation.Data")))
@@ -418,7 +410,7 @@ __attribute__((swift_name("LoginMutation.Data")))
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) BifrostLoginMutationLogin *login __attribute__((swift_name("login")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LoginMutation.Login")))
@@ -432,12 +424,12 @@ __attribute__((swift_name("LoginMutation.Login")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *__typename __attribute__((swift_name("__typename")));
 @property (readonly) BifrostFragmentAuth *fragmentAuth __attribute__((swift_name("fragmentAuth")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiQuery")))
 @protocol BifrostApollo_apiQuery <BifrostApollo_apiOperation>
 @required
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingsQuery")))
@@ -458,8 +450,8 @@ __attribute__((swift_name("TrainingsQuery")))
 - (BifrostApollo_apiCompiledField *)rootField __attribute__((swift_name("rootField()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)serializeVariablesWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("serializeVariables(writer:customScalarAdapters:)")));
 - (NSString *)description __attribute__((swift_name("description()")));
@@ -467,7 +459,7 @@ __attribute__((swift_name("TrainingsQuery")))
 @property (readonly) NSArray<BifrostQueryTrainingsForUserOrderByOrderByClause *> *orderBy __attribute__((swift_name("orderBy")));
 @property (readonly) int32_t page __attribute__((swift_name("page")));
 @property (readonly) BifrostQueryTrainingsForUserWhereWhereConditions *where __attribute__((swift_name("where")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingsQuery.Companion")))
@@ -479,12 +471,12 @@ __attribute__((swift_name("TrainingsQuery.Companion")))
 @property (readonly) NSString *OPERATION_DOCUMENT __attribute__((swift_name("OPERATION_DOCUMENT")));
 @property (readonly) NSString *OPERATION_ID __attribute__((swift_name("OPERATION_ID")));
 @property (readonly) NSString *OPERATION_NAME __attribute__((swift_name("OPERATION_NAME")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiQueryData")))
 @protocol BifrostApollo_apiQueryData <BifrostApollo_apiOperationData>
 @required
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingsQuery.Data")))
@@ -496,7 +488,7 @@ __attribute__((swift_name("TrainingsQuery.Data")))
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) BifrostTrainingsQueryTrainings_for_user * _Nullable trainings_for_user __attribute__((swift_name("trainings_for_user")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingsQuery.Data1")))
@@ -510,7 +502,7 @@ __attribute__((swift_name("TrainingsQuery.Data1")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *__typename __attribute__((swift_name("__typename")));
 @property (readonly) BifrostFragmentTraining *fragmentTraining __attribute__((swift_name("fragmentTraining")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingsQuery.Trainings_for_user")))
@@ -522,7 +514,7 @@ __attribute__((swift_name("TrainingsQuery.Trainings_for_user")))
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSArray<BifrostTrainingsQueryData1 *> *data __attribute__((swift_name("data")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AddFeedbackInput")))
@@ -536,7 +528,7 @@ __attribute__((swift_name("AddFeedbackInput")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *note __attribute__((swift_name("note")));
 @property (readonly) BifrostApollo_apiOptional<BifrostFeedbackType *> *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AuthPayload")))
@@ -544,7 +536,7 @@ __attribute__((swift_name("AuthPayload")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostAuthPayloadCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AuthPayload.Companion")))
@@ -554,7 +546,7 @@ __attribute__((swift_name("AuthPayload.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostAuthPayloadCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiObjectType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("DateTime")))
@@ -562,7 +554,7 @@ __attribute__((swift_name("DateTime")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostDateTimeCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("DateTime.Companion")))
@@ -572,7 +564,7 @@ __attribute__((swift_name("DateTime.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostDateTimeCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiCustomScalarType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Feedback")))
@@ -580,7 +572,7 @@ __attribute__((swift_name("Feedback")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostFeedbackCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Feedback.Companion")))
@@ -590,13 +582,13 @@ __attribute__((swift_name("Feedback.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostFeedbackCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiObjectType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((swift_name("KotlinComparable")))
 @protocol BifrostKotlinComparable
 @required
 - (int32_t)compareToOther:(id _Nullable)other __attribute__((swift_name("compareTo(other:)")));
-@end
+@end;
 
 __attribute__((swift_name("KotlinEnum")))
 @interface BifrostKotlinEnum<E> : BifrostBase <BifrostKotlinComparable>
@@ -608,7 +600,7 @@ __attribute__((swift_name("KotlinEnum")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly, getter=name_) NSString *name __attribute__((swift_name("name")));
 @property (readonly) int32_t ordinal __attribute__((swift_name("ordinal")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FeedbackType")))
@@ -622,7 +614,7 @@ __attribute__((swift_name("FeedbackType")))
 @property (class, readonly) BifrostFeedbackType *unknown __attribute__((swift_name("unknown")));
 + (BifrostKotlinArray<BifrostFeedbackType *> *)values __attribute__((swift_name("values()")));
 @property (readonly) NSString *rawValue __attribute__((swift_name("rawValue")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FeedbackType.Companion")))
@@ -634,7 +626,7 @@ __attribute__((swift_name("FeedbackType.Companion")))
 - (BifrostKotlinArray<BifrostFeedbackType *> *)knownValues __attribute__((swift_name("knownValues()")));
 - (BifrostFeedbackType *)safeValueOfRawValue:(NSString *)rawValue __attribute__((swift_name("safeValueOf(rawValue:)")));
 @property (readonly) BifrostApollo_apiEnumType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ForgotPasswordResponse")))
@@ -642,7 +634,7 @@ __attribute__((swift_name("ForgotPasswordResponse")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostForgotPasswordResponseCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ForgotPasswordResponse.Companion")))
@@ -652,7 +644,7 @@ __attribute__((swift_name("ForgotPasswordResponse.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostForgotPasswordResponseCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiObjectType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GraphQLBoolean")))
@@ -660,7 +652,7 @@ __attribute__((swift_name("GraphQLBoolean")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostGraphQLBooleanCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GraphQLBoolean.Companion")))
@@ -670,7 +662,7 @@ __attribute__((swift_name("GraphQLBoolean.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostGraphQLBooleanCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiCustomScalarType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GraphQLFloat")))
@@ -678,7 +670,7 @@ __attribute__((swift_name("GraphQLFloat")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostGraphQLFloatCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GraphQLFloat.Companion")))
@@ -688,7 +680,7 @@ __attribute__((swift_name("GraphQLFloat.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostGraphQLFloatCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiCustomScalarType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GraphQLID")))
@@ -696,7 +688,7 @@ __attribute__((swift_name("GraphQLID")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostGraphQLIDCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GraphQLID.Companion")))
@@ -706,7 +698,7 @@ __attribute__((swift_name("GraphQLID.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostGraphQLIDCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiCustomScalarType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GraphQLInt")))
@@ -714,7 +706,7 @@ __attribute__((swift_name("GraphQLInt")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostGraphQLIntCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GraphQLInt.Companion")))
@@ -724,7 +716,7 @@ __attribute__((swift_name("GraphQLInt.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostGraphQLIntCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiCustomScalarType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GraphQLString")))
@@ -732,7 +724,7 @@ __attribute__((swift_name("GraphQLString")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostGraphQLStringCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GraphQLString.Companion")))
@@ -742,7 +734,7 @@ __attribute__((swift_name("GraphQLString.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostGraphQLStringCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiCustomScalarType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LogoutResponse")))
@@ -750,7 +742,7 @@ __attribute__((swift_name("LogoutResponse")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostLogoutResponseCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LogoutResponse.Companion")))
@@ -760,7 +752,7 @@ __attribute__((swift_name("LogoutResponse.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostLogoutResponseCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiObjectType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Mixed")))
@@ -768,7 +760,7 @@ __attribute__((swift_name("Mixed")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostMixedCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Mixed.Companion")))
@@ -778,7 +770,7 @@ __attribute__((swift_name("Mixed.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostMixedCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiCustomScalarType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Mutation")))
@@ -786,7 +778,7 @@ __attribute__((swift_name("Mutation")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostMutationCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Mutation.Companion")))
@@ -796,7 +788,7 @@ __attribute__((swift_name("Mutation.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostMutationCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiObjectType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Query")))
@@ -804,7 +796,7 @@ __attribute__((swift_name("Query")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostQueryCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Query.Companion")))
@@ -814,7 +806,7 @@ __attribute__((swift_name("Query.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostQueryCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiObjectType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("QueryTrainingsForUserOrderByOrderByClause")))
@@ -828,7 +820,7 @@ __attribute__((swift_name("QueryTrainingsForUserOrderByOrderByClause")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) BifrostTrainingColumn *column __attribute__((swift_name("column")));
 @property (readonly) BifrostSortOrder *order __attribute__((swift_name("order")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("QueryTrainingsForUserWhereWhereConditions")))
@@ -850,7 +842,7 @@ __attribute__((swift_name("QueryTrainingsForUserWhereWhereConditions")))
 @property (readonly) BifrostApollo_apiOptional<BifrostTrainingColumn *> *column __attribute__((swift_name("column")));
 @property (readonly, getter=operator) BifrostApollo_apiOptional<BifrostSQLOperator *> *operator_ __attribute__((swift_name("operator_")));
 @property (readonly) BifrostApollo_apiOptional<id> *value __attribute__((swift_name("value")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("QueryTrainingsForUserWhereWhereConditionsRelation")))
@@ -868,7 +860,7 @@ __attribute__((swift_name("QueryTrainingsForUserWhereWhereConditionsRelation")))
 @property (readonly) BifrostApollo_apiOptional<BifrostQueryTrainingsForUserWhereWhereConditions *> *condition __attribute__((swift_name("condition")));
 @property (readonly, getter=operator) BifrostApollo_apiOptional<BifrostSQLOperator *> *operator_ __attribute__((swift_name("operator_")));
 @property (readonly) NSString *relation __attribute__((swift_name("relation")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("SQLOperator")))
@@ -896,7 +888,7 @@ __attribute__((swift_name("SQLOperator")))
 @property (class, readonly) BifrostSQLOperator *unknown __attribute__((swift_name("unknown")));
 + (BifrostKotlinArray<BifrostSQLOperator *> *)values __attribute__((swift_name("values()")));
 @property (readonly) NSString *rawValue __attribute__((swift_name("rawValue")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("SQLOperator.Companion")))
@@ -908,7 +900,7 @@ __attribute__((swift_name("SQLOperator.Companion")))
 - (BifrostKotlinArray<BifrostSQLOperator *> *)knownValues __attribute__((swift_name("knownValues()")));
 - (BifrostSQLOperator *)safeValueOfRawValue:(NSString *)rawValue __attribute__((swift_name("safeValueOf(rawValue:)")));
 @property (readonly) BifrostApollo_apiEnumType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("SortOrder")))
@@ -922,7 +914,7 @@ __attribute__((swift_name("SortOrder")))
 @property (class, readonly) BifrostSortOrder *unknown __attribute__((swift_name("unknown")));
 + (BifrostKotlinArray<BifrostSortOrder *> *)values __attribute__((swift_name("values()")));
 @property (readonly) NSString *rawValue __attribute__((swift_name("rawValue")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("SortOrder.Companion")))
@@ -934,7 +926,7 @@ __attribute__((swift_name("SortOrder.Companion")))
 - (BifrostKotlinArray<BifrostSortOrder *> *)knownValues __attribute__((swift_name("knownValues()")));
 - (BifrostSortOrder *)safeValueOfRawValue:(NSString *)rawValue __attribute__((swift_name("safeValueOf(rawValue:)")));
 @property (readonly) BifrostApollo_apiEnumType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Training")))
@@ -942,7 +934,7 @@ __attribute__((swift_name("Training")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostTrainingCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Training.Companion")))
@@ -952,7 +944,7 @@ __attribute__((swift_name("Training.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostTrainingCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiObjectType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingColumn")))
@@ -976,7 +968,7 @@ __attribute__((swift_name("TrainingColumn")))
 @property (class, readonly) BifrostTrainingColumn *unknown __attribute__((swift_name("unknown")));
 + (BifrostKotlinArray<BifrostTrainingColumn *> *)values __attribute__((swift_name("values()")));
 @property (readonly) NSString *rawValue __attribute__((swift_name("rawValue")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingColumn.Companion")))
@@ -988,7 +980,7 @@ __attribute__((swift_name("TrainingColumn.Companion")))
 - (BifrostKotlinArray<BifrostTrainingColumn *> *)knownValues __attribute__((swift_name("knownValues()")));
 - (BifrostTrainingColumn *)safeValueOfRawValue:(NSString *)rawValue __attribute__((swift_name("safeValueOf(rawValue:)")));
 @property (readonly) BifrostApollo_apiEnumType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingPaginator")))
@@ -996,7 +988,7 @@ __attribute__((swift_name("TrainingPaginator")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostTrainingPaginatorCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingPaginator.Companion")))
@@ -1006,7 +998,7 @@ __attribute__((swift_name("TrainingPaginator.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostTrainingPaginatorCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiObjectType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("User")))
@@ -1014,7 +1006,7 @@ __attribute__((swift_name("User")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostUserCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("User.Companion")))
@@ -1024,24 +1016,24 @@ __attribute__((swift_name("User.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostUserCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiObjectType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiAdapter")))
 @protocol BifrostApollo_apiAdapter
 @required
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(id _Nullable)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AddFeedbackInput_InputAdapter")))
@@ -1052,17 +1044,17 @@ __attribute__((swift_name("AddFeedbackInput_InputAdapter")))
 @property (class, readonly, getter=shared) BifrostAddFeedbackInput_InputAdapter *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostAddFeedbackInput * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostAddFeedbackInput *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FeedbackType_ResponseAdapter")))
@@ -1073,17 +1065,17 @@ __attribute__((swift_name("FeedbackType_ResponseAdapter")))
 @property (class, readonly, getter=shared) BifrostFeedbackType_ResponseAdapter *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostFeedbackType * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostFeedbackType *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("QueryTrainingsForUserOrderByOrderByClause_InputAdapter")))
@@ -1094,17 +1086,17 @@ __attribute__((swift_name("QueryTrainingsForUserOrderByOrderByClause_InputAdapte
 @property (class, readonly, getter=shared) BifrostQueryTrainingsForUserOrderByOrderByClause_InputAdapter *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostQueryTrainingsForUserOrderByOrderByClause * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostQueryTrainingsForUserOrderByOrderByClause *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("QueryTrainingsForUserWhereWhereConditionsRelation_InputAdapter")))
@@ -1115,17 +1107,17 @@ __attribute__((swift_name("QueryTrainingsForUserWhereWhereConditionsRelation_Inp
 @property (class, readonly, getter=shared) BifrostQueryTrainingsForUserWhereWhereConditionsRelation_InputAdapter *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostQueryTrainingsForUserWhereWhereConditionsRelation * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostQueryTrainingsForUserWhereWhereConditionsRelation *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("QueryTrainingsForUserWhereWhereConditions_InputAdapter")))
@@ -1136,17 +1128,17 @@ __attribute__((swift_name("QueryTrainingsForUserWhereWhereConditions_InputAdapte
 @property (class, readonly, getter=shared) BifrostQueryTrainingsForUserWhereWhereConditions_InputAdapter *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostQueryTrainingsForUserWhereWhereConditions * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostQueryTrainingsForUserWhereWhereConditions *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("SQLOperator_ResponseAdapter")))
@@ -1157,17 +1149,17 @@ __attribute__((swift_name("SQLOperator_ResponseAdapter")))
 @property (class, readonly, getter=shared) BifrostSQLOperator_ResponseAdapter *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostSQLOperator * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostSQLOperator *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("SortOrder_ResponseAdapter")))
@@ -1178,17 +1170,17 @@ __attribute__((swift_name("SortOrder_ResponseAdapter")))
 @property (class, readonly, getter=shared) BifrostSortOrder_ResponseAdapter *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostSortOrder * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostSortOrder *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingColumn_ResponseAdapter")))
@@ -1199,17 +1191,17 @@ __attribute__((swift_name("TrainingColumn_ResponseAdapter")))
 @property (class, readonly, getter=shared) BifrostTrainingColumn_ResponseAdapter *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostTrainingColumn * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostTrainingColumn *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Bifrost")))
@@ -1219,17 +1211,17 @@ __attribute__((swift_name("Bifrost")))
 + (instancetype)bifrost __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostBifrost *shared __attribute__((swift_name("shared")));
 @property (readonly) id<BifrostBifrostCore> sharedInstance __attribute__((swift_name("sharedInstance")));
-@end
+@end;
 
 __attribute__((swift_name("BifrostCore")))
 @protocol BifrostBifrostCore
 @required
 - (void)setUserVariablesToken:(NSString *)token userId:(int32_t)userId __attribute__((swift_name("setUserVariables(token:userId:)")));
-@end
+@end;
 
 __attribute__((swift_name("ResponseState")))
 @interface BifrostResponseState<__covariant T> : BifrostBase
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ResponseStateError")))
@@ -1238,19 +1230,19 @@ __attribute__((swift_name("ResponseStateError")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)error __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostResponseStateError *shared __attribute__((swift_name("shared")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ResponseStateSuccess")))
 @interface BifrostResponseStateSuccess<__covariant T> : BifrostResponseState<T>
 - (instancetype)initWithData:(T)data __attribute__((swift_name("init(data:)"))) __attribute__((objc_designated_initializer));
 @property (readonly) T data __attribute__((swift_name("data")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiFragmentData")))
 @protocol BifrostApollo_apiFragmentData <BifrostApollo_apiExecutableData>
 @required
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FragmentAuth")))
@@ -1268,7 +1260,7 @@ __attribute__((swift_name("FragmentAuth")))
 @property (readonly) BifrostInt * _Nullable expires_in __attribute__((swift_name("expires_in")));
 @property (readonly) NSString * _Nullable refresh_token __attribute__((swift_name("refresh_token")));
 @property (readonly) BifrostFragmentAuthUser * _Nullable user __attribute__((swift_name("user")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FragmentAuth.User")))
@@ -1282,7 +1274,7 @@ __attribute__((swift_name("FragmentAuth.User")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *__typename __attribute__((swift_name("__typename")));
 @property (readonly) BifrostFragmentUser *fragmentUser __attribute__((swift_name("fragmentUser")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FragmentAuthImpl_ResponseAdapter")))
@@ -1291,7 +1283,7 @@ __attribute__((swift_name("FragmentAuthImpl_ResponseAdapter")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)fragmentAuthImpl_ResponseAdapter __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostFragmentAuthImpl_ResponseAdapter *shared __attribute__((swift_name("shared")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FragmentAuthImpl_ResponseAdapter.FragmentAuth")))
@@ -1302,18 +1294,18 @@ __attribute__((swift_name("FragmentAuthImpl_ResponseAdapter.FragmentAuth")))
 @property (class, readonly, getter=shared) BifrostFragmentAuthImpl_ResponseAdapterFragmentAuth *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostFragmentAuth * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostFragmentAuth *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FragmentAuthImpl_ResponseAdapter.User")))
@@ -1324,18 +1316,18 @@ __attribute__((swift_name("FragmentAuthImpl_ResponseAdapter.User")))
 @property (class, readonly, getter=shared) BifrostFragmentAuthImpl_ResponseAdapterUser *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostFragmentAuthUser * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostFragmentAuthUser *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FragmentTraining")))
@@ -1361,7 +1353,7 @@ __attribute__((swift_name("FragmentTraining")))
 @property (readonly) NSString * _Nullable meeting_recording_link __attribute__((swift_name("meeting_recording_link")));
 @property (readonly) id starts_at __attribute__((swift_name("starts_at")));
 @property (readonly) NSString * _Nullable title __attribute__((swift_name("title")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FragmentTrainingImpl_ResponseAdapter")))
@@ -1370,7 +1362,7 @@ __attribute__((swift_name("FragmentTrainingImpl_ResponseAdapter")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)fragmentTrainingImpl_ResponseAdapter __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostFragmentTrainingImpl_ResponseAdapter *shared __attribute__((swift_name("shared")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FragmentTrainingImpl_ResponseAdapter.FragmentTraining")))
@@ -1381,18 +1373,18 @@ __attribute__((swift_name("FragmentTrainingImpl_ResponseAdapter.FragmentTraining
 @property (class, readonly, getter=shared) BifrostFragmentTrainingImpl_ResponseAdapterFragmentTraining *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostFragmentTraining * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostFragmentTraining *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FragmentUser")))
@@ -1418,7 +1410,7 @@ __attribute__((swift_name("FragmentUser")))
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @property (readonly) BOOL login_fizbot_agent __attribute__((swift_name("login_fizbot_agent")));
 @property (readonly) NSString * _Nullable payment_url __attribute__((swift_name("payment_url")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FragmentUserImpl_ResponseAdapter")))
@@ -1427,7 +1419,7 @@ __attribute__((swift_name("FragmentUserImpl_ResponseAdapter")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)fragmentUserImpl_ResponseAdapter __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostFragmentUserImpl_ResponseAdapter *shared __attribute__((swift_name("shared")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("FragmentUserImpl_ResponseAdapter.FragmentUser")))
@@ -1438,18 +1430,18 @@ __attribute__((swift_name("FragmentUserImpl_ResponseAdapter.FragmentUser")))
 @property (class, readonly, getter=shared) BifrostFragmentUserImpl_ResponseAdapterFragmentUser *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostFragmentUser * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostFragmentUser *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("fragmentAuthSelections")))
@@ -1459,7 +1451,7 @@ __attribute__((swift_name("fragmentAuthSelections")))
 + (instancetype)fragmentAuthSelections __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostfragmentAuthSelections *shared __attribute__((swift_name("shared")));
 @property (readonly) NSArray<BifrostApollo_apiCompiledSelection *> *__root __attribute__((swift_name("__root")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("fragmentTrainingSelections")))
@@ -1469,7 +1461,7 @@ __attribute__((swift_name("fragmentTrainingSelections")))
 + (instancetype)fragmentTrainingSelections __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostfragmentTrainingSelections *shared __attribute__((swift_name("shared")));
 @property (readonly) NSArray<BifrostApollo_apiCompiledSelection *> *__root __attribute__((swift_name("__root")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("fragmentUserSelections")))
@@ -1479,18 +1471,18 @@ __attribute__((swift_name("fragmentUserSelections")))
 + (instancetype)fragmentUserSelections __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostfragmentUserSelections *shared __attribute__((swift_name("shared")));
 @property (readonly) NSArray<BifrostApollo_apiCompiledSelection *> *__root __attribute__((swift_name("__root")));
-@end
+@end;
 
 __attribute__((swift_name("Kotlinx_coroutines_coreFlow")))
 @protocol BifrostKotlinx_coroutines_coreFlow
 @required
 
 /**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (void)collectCollector:(id<BifrostKotlinx_coroutines_coreFlowCollector>)collector completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("collect(collector:completionHandler:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CommonFlow")))
@@ -1498,12 +1490,12 @@ __attribute__((swift_name("CommonFlow")))
 - (instancetype)initWithOrigin:(id<BifrostKotlinx_coroutines_coreFlow>)origin __attribute__((swift_name("init(origin:)"))) __attribute__((objc_designated_initializer));
 
 /**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (void)collectCollector:(id<BifrostKotlinx_coroutines_coreFlowCollector>)collector completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("collect(collector:completionHandler:)")));
 - (id<BifrostOkioCloseable>)fetchBlock:(void (^)(T _Nullable))block __attribute__((swift_name("fetch(block:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GraphQLError")))
@@ -1519,7 +1511,7 @@ __attribute__((swift_name("GraphQLError")))
 @property (readonly) NSArray<NSString *> *errors __attribute__((swift_name("errors")));
 @property (readonly) NSString *input __attribute__((swift_name("input")));
 @property (readonly) NSString *operationName __attribute__((swift_name("operationName")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Listeners")))
@@ -1527,7 +1519,7 @@ __attribute__((swift_name("Listeners")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostListenersCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Listeners.Companion")))
@@ -1537,7 +1529,7 @@ __attribute__((swift_name("Listeners.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostListenersCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) id<BifrostKotlinx_coroutines_coreMutableSharedFlow> apiErrors __attribute__((swift_name("apiErrors")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LocalStorage")))
@@ -1550,13 +1542,13 @@ __attribute__((swift_name("LocalStorage")))
 - (int32_t)getUserId __attribute__((swift_name("getUserId()")));
 - (void)setTokenToken:(NSString *)token __attribute__((swift_name("setToken(token:)")));
 - (void)setUserIdUserId:(int32_t)userId __attribute__((swift_name("setUserId(userId:)")));
-@end
+@end;
 
 __attribute__((swift_name("Koin_coreKoinComponent")))
 @protocol BifrostKoin_coreKoinComponent
 @required
 - (BifrostKoin_coreKoin *)getKoin __attribute__((swift_name("getKoin()")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("DI")))
@@ -1564,13 +1556,13 @@ __attribute__((swift_name("DI")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (readonly) id<BifrostHelpRepository> helpRepository __attribute__((swift_name("helpRepository")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GraphQLApi")))
 @interface BifrostGraphQLApi : BifrostBase
 - (instancetype)initWithGraphQLAuthorizationInterceptor:(BifrostGraphQLAuthorizationInterceptor *)graphQLAuthorizationInterceptor __attribute__((swift_name("init(graphQLAuthorizationInterceptor:)"))) __attribute__((objc_designated_initializer));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_runtimeHttpInterceptor")))
 @protocol BifrostApollo_runtimeHttpInterceptor
@@ -1578,11 +1570,11 @@ __attribute__((swift_name("Apollo_runtimeHttpInterceptor")))
 - (void)dispose __attribute__((swift_name("dispose()")));
 
 /**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (void)interceptRequest:(BifrostApollo_apiHttpRequest *)request chain:(id<BifrostApollo_runtimeHttpInterceptorChain>)chain completionHandler:(void (^)(BifrostApollo_apiHttpResponse * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("intercept(request:chain:completionHandler:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("GraphQLAuthorizationInterceptor")))
@@ -1591,34 +1583,34 @@ __attribute__((swift_name("GraphQLAuthorizationInterceptor")))
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 
 /**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (void)interceptRequest:(BifrostApollo_apiHttpRequest *)request chain:(id<BifrostApollo_runtimeHttpInterceptorChain>)chain completionHandler:(void (^)(BifrostApollo_apiHttpResponse * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("intercept(request:chain:completionHandler:)")));
-@end
+@end;
 
 __attribute__((swift_name("AuthRepository")))
 @protocol BifrostAuthRepository
 @required
 
 /**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (void)forgotPasswordOTPCellPhone:(NSString *)cellPhone completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("forgotPasswordOTP(cellPhone:completionHandler:)")));
 
 /**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (void)logOutWithCompletionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("logOut(completionHandler:)")));
 
 /**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (void)loginCellPhone:(NSString *)cellPhone password:(NSString *)password completionHandler:(void (^)(BifrostFragmentAuth * _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("login(cellPhone:password:completionHandler:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AuthRepositoryImpl")))
@@ -1626,23 +1618,23 @@ __attribute__((swift_name("AuthRepositoryImpl")))
 - (instancetype)initWithApi:(BifrostGraphQLApi *)api __attribute__((swift_name("init(api:)"))) __attribute__((objc_designated_initializer));
 
 /**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (void)forgotPasswordOTPCellPhone:(NSString *)cellPhone completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("forgotPasswordOTP(cellPhone:completionHandler:)")));
 
 /**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (void)logOutWithCompletionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("logOut(completionHandler:)")));
 
 /**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (void)loginCellPhone:(NSString *)cellPhone password:(NSString *)password completionHandler:(void (^)(BifrostFragmentAuth * _Nullable_result, NSError * _Nullable))completionHandler __attribute__((swift_name("login(cellPhone:password:completionHandler:)")));
-@end
+@end;
 
 __attribute__((swift_name("HelpRepository")))
 @protocol BifrostHelpRepository
@@ -1650,7 +1642,7 @@ __attribute__((swift_name("HelpRepository")))
 - (BifrostCommonFlow<BifrostResponseState<id> *> *)addFeedBackType:(BifrostUserFeedBackType *)type note:(NSString *)note __attribute__((swift_name("addFeedBack(type:note:)")));
 - (BifrostCommonFlow<BifrostResponseState<BifrostTraining_ *> *> *)getLastTraining __attribute__((swift_name("getLastTraining()")));
 - (BifrostCommonFlow<BifrostResponseState<NSArray<BifrostTraining_ *> *> *> *)getTrainingListType:(BifrostTrainingListPeriod *)type __attribute__((swift_name("getTrainingList(type:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("HelpRepositoryImpl")))
@@ -1659,7 +1651,7 @@ __attribute__((swift_name("HelpRepositoryImpl")))
 - (BifrostCommonFlow<BifrostResponseState<id> *> *)addFeedBackType:(BifrostUserFeedBackType *)type note:(NSString *)note __attribute__((swift_name("addFeedBack(type:note:)")));
 - (BifrostCommonFlow<BifrostResponseState<BifrostTraining_ *> *> *)getLastTraining __attribute__((swift_name("getLastTraining()")));
 - (BifrostCommonFlow<BifrostResponseState<NSArray<BifrostTraining_ *> *> *> *)getTrainingListType:(BifrostTrainingListPeriod *)type __attribute__((swift_name("getTrainingList(type:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AddFeedbackMutationSelections")))
@@ -1669,7 +1661,7 @@ __attribute__((swift_name("AddFeedbackMutationSelections")))
 + (instancetype)addFeedbackMutationSelections __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostAddFeedbackMutationSelections *shared __attribute__((swift_name("shared")));
 @property (readonly) NSArray<BifrostApollo_apiCompiledSelection *> *__root __attribute__((swift_name("__root")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ForgotPasswordOTPMutationSelections")))
@@ -1679,7 +1671,7 @@ __attribute__((swift_name("ForgotPasswordOTPMutationSelections")))
 + (instancetype)forgotPasswordOTPMutationSelections __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostForgotPasswordOTPMutationSelections *shared __attribute__((swift_name("shared")));
 @property (readonly) NSArray<BifrostApollo_apiCompiledSelection *> *__root __attribute__((swift_name("__root")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LogOutMutationSelections")))
@@ -1689,7 +1681,7 @@ __attribute__((swift_name("LogOutMutationSelections")))
 + (instancetype)logOutMutationSelections __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostLogOutMutationSelections *shared __attribute__((swift_name("shared")));
 @property (readonly) NSArray<BifrostApollo_apiCompiledSelection *> *__root __attribute__((swift_name("__root")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LoginMutationSelections")))
@@ -1699,7 +1691,7 @@ __attribute__((swift_name("LoginMutationSelections")))
 + (instancetype)loginMutationSelections __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostLoginMutationSelections *shared __attribute__((swift_name("shared")));
 @property (readonly) NSArray<BifrostApollo_apiCompiledSelection *> *__root __attribute__((swift_name("__root")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingsQuerySelections")))
@@ -1709,7 +1701,7 @@ __attribute__((swift_name("TrainingsQuerySelections")))
 + (instancetype)trainingsQuerySelections __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostTrainingsQuerySelections *shared __attribute__((swift_name("shared")));
 @property (readonly) NSArray<BifrostApollo_apiCompiledSelection *> *__root __attribute__((swift_name("__root")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AddFeedbackMutation_ResponseAdapter")))
@@ -1718,7 +1710,7 @@ __attribute__((swift_name("AddFeedbackMutation_ResponseAdapter")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)addFeedbackMutation_ResponseAdapter __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostAddFeedbackMutation_ResponseAdapter *shared __attribute__((swift_name("shared")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AddFeedbackMutation_ResponseAdapter.AddFeedback")))
@@ -1729,18 +1721,18 @@ __attribute__((swift_name("AddFeedbackMutation_ResponseAdapter.AddFeedback")))
 @property (class, readonly, getter=shared) BifrostAddFeedbackMutation_ResponseAdapterAddFeedback *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostAddFeedbackMutationAddFeedback * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostAddFeedbackMutationAddFeedback *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AddFeedbackMutation_ResponseAdapter.Data")))
@@ -1751,18 +1743,18 @@ __attribute__((swift_name("AddFeedbackMutation_ResponseAdapter.Data")))
 @property (class, readonly, getter=shared) BifrostAddFeedbackMutation_ResponseAdapterData *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostAddFeedbackMutationData * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostAddFeedbackMutationData *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AddFeedbackMutation_VariablesAdapter")))
@@ -1773,17 +1765,17 @@ __attribute__((swift_name("AddFeedbackMutation_VariablesAdapter")))
 @property (class, readonly, getter=shared) BifrostAddFeedbackMutation_VariablesAdapter *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostAddFeedbackMutation * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostAddFeedbackMutation *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ForgotPasswordOTPMutation_ResponseAdapter")))
@@ -1792,7 +1784,7 @@ __attribute__((swift_name("ForgotPasswordOTPMutation_ResponseAdapter")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)forgotPasswordOTPMutation_ResponseAdapter __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostForgotPasswordOTPMutation_ResponseAdapter *shared __attribute__((swift_name("shared")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ForgotPasswordOTPMutation_ResponseAdapter.Data")))
@@ -1803,18 +1795,18 @@ __attribute__((swift_name("ForgotPasswordOTPMutation_ResponseAdapter.Data")))
 @property (class, readonly, getter=shared) BifrostForgotPasswordOTPMutation_ResponseAdapterData *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostForgotPasswordOTPMutationData * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostForgotPasswordOTPMutationData *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ForgotPasswordOTPMutation_ResponseAdapter.ForgotPasswordOTP")))
@@ -1825,18 +1817,18 @@ __attribute__((swift_name("ForgotPasswordOTPMutation_ResponseAdapter.ForgotPassw
 @property (class, readonly, getter=shared) BifrostForgotPasswordOTPMutation_ResponseAdapterForgotPasswordOTP *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostForgotPasswordOTPMutationForgotPasswordOTP * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostForgotPasswordOTPMutationForgotPasswordOTP *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ForgotPasswordOTPMutation_VariablesAdapter")))
@@ -1847,17 +1839,17 @@ __attribute__((swift_name("ForgotPasswordOTPMutation_VariablesAdapter")))
 @property (class, readonly, getter=shared) BifrostForgotPasswordOTPMutation_VariablesAdapter *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostForgotPasswordOTPMutation * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostForgotPasswordOTPMutation *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LogOutMutation_ResponseAdapter")))
@@ -1866,7 +1858,7 @@ __attribute__((swift_name("LogOutMutation_ResponseAdapter")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)logOutMutation_ResponseAdapter __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostLogOutMutation_ResponseAdapter *shared __attribute__((swift_name("shared")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LogOutMutation_ResponseAdapter.Data")))
@@ -1877,18 +1869,18 @@ __attribute__((swift_name("LogOutMutation_ResponseAdapter.Data")))
 @property (class, readonly, getter=shared) BifrostLogOutMutation_ResponseAdapterData *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostLogOutMutationData * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostLogOutMutationData *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LogOutMutation_ResponseAdapter.Logout")))
@@ -1899,18 +1891,18 @@ __attribute__((swift_name("LogOutMutation_ResponseAdapter.Logout")))
 @property (class, readonly, getter=shared) BifrostLogOutMutation_ResponseAdapterLogout *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostLogOutMutationLogout * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostLogOutMutationLogout *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LoginMutation_ResponseAdapter")))
@@ -1919,7 +1911,7 @@ __attribute__((swift_name("LoginMutation_ResponseAdapter")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)loginMutation_ResponseAdapter __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostLoginMutation_ResponseAdapter *shared __attribute__((swift_name("shared")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LoginMutation_ResponseAdapter.Data")))
@@ -1930,18 +1922,18 @@ __attribute__((swift_name("LoginMutation_ResponseAdapter.Data")))
 @property (class, readonly, getter=shared) BifrostLoginMutation_ResponseAdapterData *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostLoginMutationData * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostLoginMutationData *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LoginMutation_ResponseAdapter.Login")))
@@ -1952,18 +1944,18 @@ __attribute__((swift_name("LoginMutation_ResponseAdapter.Login")))
 @property (class, readonly, getter=shared) BifrostLoginMutation_ResponseAdapterLogin *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostLoginMutationLogin * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostLoginMutationLogin *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("LoginMutation_VariablesAdapter")))
@@ -1974,17 +1966,17 @@ __attribute__((swift_name("LoginMutation_VariablesAdapter")))
 @property (class, readonly, getter=shared) BifrostLoginMutation_VariablesAdapter *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostLoginMutation * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostLoginMutation *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingsQuery_ResponseAdapter")))
@@ -1993,7 +1985,7 @@ __attribute__((swift_name("TrainingsQuery_ResponseAdapter")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)trainingsQuery_ResponseAdapter __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostTrainingsQuery_ResponseAdapter *shared __attribute__((swift_name("shared")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingsQuery_ResponseAdapter.Data")))
@@ -2004,18 +1996,18 @@ __attribute__((swift_name("TrainingsQuery_ResponseAdapter.Data")))
 @property (class, readonly, getter=shared) BifrostTrainingsQuery_ResponseAdapterData *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostTrainingsQueryData * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostTrainingsQueryData *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingsQuery_ResponseAdapter.Data1")))
@@ -2026,18 +2018,18 @@ __attribute__((swift_name("TrainingsQuery_ResponseAdapter.Data1")))
 @property (class, readonly, getter=shared) BifrostTrainingsQuery_ResponseAdapterData1 *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostTrainingsQueryData1 * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostTrainingsQueryData1 *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingsQuery_ResponseAdapter.Trainings_for_user")))
@@ -2048,18 +2040,18 @@ __attribute__((swift_name("TrainingsQuery_ResponseAdapter.Trainings_for_user")))
 @property (class, readonly, getter=shared) BifrostTrainingsQuery_ResponseAdapterTrainings_for_user *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostTrainingsQueryTrainings_for_user * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostTrainingsQueryTrainings_for_user *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
 @property (readonly) NSArray<NSString *> *RESPONSE_NAMES __attribute__((swift_name("RESPONSE_NAMES")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingsQuery_VariablesAdapter")))
@@ -2070,17 +2062,17 @@ __attribute__((swift_name("TrainingsQuery_VariablesAdapter")))
 @property (class, readonly, getter=shared) BifrostTrainingsQuery_VariablesAdapter *shared __attribute__((swift_name("shared")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostTrainingsQuery * _Nullable)fromJsonReader:(id<BifrostApollo_apiJsonReader>)reader customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("fromJson(reader:customScalarAdapters:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)toJsonWriter:(id<BifrostApollo_apiJsonWriter>)writer customScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters value:(BifrostTrainingsQuery *)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("toJson(writer:customScalarAdapters:value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AppConstant")))
@@ -2091,7 +2083,7 @@ __attribute__((swift_name("AppConstant")))
 @property (class, readonly, getter=shared) BifrostAppConstant *shared __attribute__((swift_name("shared")));
 @property (readonly) NSString *helpCenterPhoneNumber __attribute__((swift_name("helpCenterPhoneNumber")));
 @property (readonly) NSString *helpCenterWhatsappNumber __attribute__((swift_name("helpCenterWhatsappNumber")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("DateFormatType")))
@@ -2106,7 +2098,7 @@ __attribute__((swift_name("DateFormatType")))
 @property (class, readonly) BifrostDateFormatType *apiFormat __attribute__((swift_name("apiFormat")));
 + (BifrostKotlinArray<BifrostDateFormatType *> *)values __attribute__((swift_name("values()")));
 @property (readonly) NSString *value __attribute__((swift_name("value")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("DateUtil")))
@@ -2118,7 +2110,7 @@ __attribute__((swift_name("DateUtil")))
 - (NSString *)getCurrentDateFormat:(BifrostDateFormatType *)format __attribute__((swift_name("getCurrentDate(format:)")));
 - (NSString *)parseDateDate:(NSString *)date format:(BifrostDateFormatType *)format __attribute__((swift_name("parseDate(date:format:)")));
 @property (readonly) NSString *apiDateFormatType __attribute__((swift_name("apiDateFormatType")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("TrainingListPeriod")))
@@ -2129,7 +2121,7 @@ __attribute__((swift_name("TrainingListPeriod")))
 @property (class, readonly) BifrostTrainingListPeriod *upcoming __attribute__((swift_name("upcoming")));
 @property (class, readonly) BifrostTrainingListPeriod *previous __attribute__((swift_name("previous")));
 + (BifrostKotlinArray<BifrostTrainingListPeriod *> *)values __attribute__((swift_name("values()")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UserFeedBackType")))
@@ -2141,7 +2133,7 @@ __attribute__((swift_name("UserFeedBackType")))
 @property (class, readonly) BifrostUserFeedBackType *suggestion __attribute__((swift_name("suggestion")));
 @property (class, readonly) BifrostUserFeedBackType *deletion __attribute__((swift_name("deletion")));
 + (BifrostKotlinArray<BifrostUserFeedBackType *> *)values __attribute__((swift_name("values()")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Auth")))
@@ -2159,7 +2151,7 @@ __attribute__((swift_name("Auth")))
 @property int32_t expiresIn __attribute__((swift_name("expiresIn")));
 @property NSString *refreshToken __attribute__((swift_name("refreshToken")));
 @property (readonly) BifrostUser_ *user __attribute__((swift_name("user")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("User_")))
@@ -2181,7 +2173,7 @@ __attribute__((swift_name("User_")))
 @property NSString *email __attribute__((swift_name("email")));
 @property NSString *fullName __attribute__((swift_name("fullName")));
 @property int32_t id __attribute__((swift_name("id")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Training_")))
@@ -2208,7 +2200,7 @@ __attribute__((swift_name("Training_")))
 @property NSString *recordingLink __attribute__((swift_name("recordingLink")));
 @property NSString *startsAt __attribute__((swift_name("startsAt")));
 @property NSString *title __attribute__((swift_name("title")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Training_.Companion")))
@@ -2218,12 +2210,12 @@ __attribute__((swift_name("Training_.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostTraining_Companion *shared __attribute__((swift_name("shared")));
 - (BifrostTraining_ *)doInit __attribute__((swift_name("doInit()")));
-@end
+@end;
 
 @interface BifrostResponseState (Extensions)
 - (BifrostResponseState<id> *)onErrorAction:(void (^)(void))action __attribute__((swift_name("onError(action:)")));
 - (BifrostResponseState<id> *)onSuccessAction:(void (^)(id))action __attribute__((swift_name("onSuccess(action:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiApolloResponse")))
@@ -2238,30 +2230,30 @@ __attribute__((swift_name("Apollo_apiApolloResponse")))
 @property (readonly) BOOL isLast __attribute__((swift_name("isLast")));
 @property (readonly) id<BifrostApollo_apiOperation> operation __attribute__((swift_name("operation")));
 @property (readonly) BifrostUuidUuid *requestUuid __attribute__((swift_name("requestUuid")));
-@end
+@end;
 
 @interface BifrostApollo_apiApolloResponse (Extensions)
 - (BOOL)isFailed __attribute__((swift_name("isFailed()")));
-@end
+@end;
 
 @interface BifrostFragmentTraining (Extensions)
 - (BifrostTraining_ *)toTraining __attribute__((swift_name("toTraining()")));
-@end
+@end;
 
 @interface BifrostFragmentAuth (Extensions)
 - (BifrostAuth *)toAuth __attribute__((swift_name("toAuth()")));
-@end
+@end;
 
 @interface BifrostFragmentUser (Extensions)
 - (BifrostUser_ *)toUser __attribute__((swift_name("toUser()")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("CommonFlowKt")))
 @interface BifrostCommonFlowKt : BifrostBase
 + (BifrostCommonFlow<id> *)asCommonFlow:(id<BifrostKotlinx_coroutines_coreFlow>)receiver __attribute__((swift_name("asCommonFlow(_:)")));
 + (BifrostCommonFlow<id> *)wrap:(id<BifrostKotlinx_coroutines_coreFlow>)receiver __attribute__((swift_name("wrap(_:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("AppModuleKt")))
@@ -2270,7 +2262,7 @@ __attribute__((swift_name("AppModuleKt")))
 + (BifrostKoin_coreKoinApplication *)doInitKoinAppDeclaration:(void (^)(BifrostKoin_coreKoinApplication *))appDeclaration __attribute__((swift_name("doInitKoin(appDeclaration:)")));
 @property (class, readonly) BifrostKoin_coreModule *apolloModule __attribute__((swift_name("apolloModule")));
 @property (class, readonly) BifrostKoin_coreModule *repositoryModule __attribute__((swift_name("repositoryModule")));
-@end
+@end;
 
 __attribute__((swift_name("KotlinThrowable")))
 @interface BifrostKotlinThrowable : BifrostBase
@@ -2285,7 +2277,7 @@ __attribute__((swift_name("KotlinThrowable")))
 @property (readonly) BifrostKotlinThrowable * _Nullable cause __attribute__((swift_name("cause")));
 @property (readonly) NSString * _Nullable message __attribute__((swift_name("message")));
 - (NSError *)asError __attribute__((swift_name("asError()")));
-@end
+@end;
 
 __attribute__((swift_name("KotlinException")))
 @interface BifrostKotlinException : BifrostKotlinThrowable
@@ -2294,7 +2286,7 @@ __attribute__((swift_name("KotlinException")))
 - (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithCause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
-@end
+@end;
 
 __attribute__((swift_name("OkioIOException")))
 @interface BifrostOkioIOException : BifrostKotlinException
@@ -2303,11 +2295,11 @@ __attribute__((swift_name("OkioIOException")))
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 + (instancetype)new __attribute__((unavailable));
 - (instancetype)initWithCause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiCompiledSelection")))
 @interface BifrostApollo_apiCompiledSelection : BifrostBase
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiCompiledField")))
@@ -2322,108 +2314,108 @@ __attribute__((swift_name("Apollo_apiCompiledField")))
 @property (readonly) NSString *responseName __attribute__((swift_name("responseName")));
 @property (readonly) NSArray<BifrostApollo_apiCompiledSelection *> *selections __attribute__((swift_name("selections")));
 @property (readonly) BifrostApollo_apiCompiledType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((swift_name("OkioCloseable")))
 @protocol BifrostOkioCloseable
 @required
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)closeAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("close()")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiJsonWriter")))
 @protocol BifrostApollo_apiJsonWriter <BifrostOkioCloseable>
 @required
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonWriter> _Nullable)beginArrayAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("beginArray()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonWriter> _Nullable)beginObjectAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("beginObject()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonWriter> _Nullable)endArrayAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("endArray()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonWriter> _Nullable)endObjectAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("endObject()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)flushAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("flush()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonWriter> _Nullable)nameName:(NSString *)name error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("name(name:)")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonWriter> _Nullable)nullValueAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("nullValue()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonWriter> _Nullable)valueValue:(id<BifrostApollo_apiUpload>)value error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("value(value:)")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonWriter> _Nullable)valueValue:(BifrostApollo_apiJsonNumber *)value error_:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("value(value_:)")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonWriter> _Nullable)valueValue:(BOOL)value error__:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("value(value__:)")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonWriter> _Nullable)valueValue:(double)value error___:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("value(value___:)")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonWriter> _Nullable)valueValue:(int32_t)value error____:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("value(value____:)")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonWriter> _Nullable)valueValue:(int64_t)value error_____:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("value(value_____:)")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonWriter> _Nullable)valueValue:(NSString *)value error______:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("value(value______:)")));
 @property (readonly) NSString *path __attribute__((swift_name("path")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiExecutionContext")))
 @protocol BifrostApollo_apiExecutionContext
@@ -2432,13 +2424,13 @@ __attribute__((swift_name("Apollo_apiExecutionContext")))
 - (id<BifrostApollo_apiExecutionContextElement> _Nullable)getKey:(id<BifrostApollo_apiExecutionContextKey>)key __attribute__((swift_name("get(key:)")));
 - (id<BifrostApollo_apiExecutionContext>)minusKeyKey:(id<BifrostApollo_apiExecutionContextKey>)key __attribute__((swift_name("minusKey(key:)")));
 - (id<BifrostApollo_apiExecutionContext>)plusContext:(id<BifrostApollo_apiExecutionContext>)context __attribute__((swift_name("plus(context:)")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiExecutionContextElement")))
 @protocol BifrostApollo_apiExecutionContextElement <BifrostApollo_apiExecutionContext>
 @required
 @property (readonly) id<BifrostApollo_apiExecutionContextKey> key __attribute__((swift_name("key")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiCustomScalarAdapters")))
@@ -2449,27 +2441,25 @@ __attribute__((swift_name("Apollo_apiCustomScalarAdapters")))
 - (NSSet<NSString *> *)variables __attribute__((swift_name("variables()"))) __attribute__((deprecated("Use adapterContext.variables() instead")));
 @property (readonly) BifrostApollo_apiAdapterContext *adapterContext __attribute__((swift_name("adapterContext")));
 @property (readonly) id<BifrostApollo_apiExecutionContextKey> key __attribute__((swift_name("key")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiOptional")))
 @interface BifrostApollo_apiOptional<__covariant V> : BifrostBase
 @property (class, readonly, getter=companion) BifrostApollo_apiOptionalCompanion *companion __attribute__((swift_name("companion")));
 - (V _Nullable)getOrNull __attribute__((swift_name("getOrNull()")));
 - (V)getOrThrow __attribute__((swift_name("getOrThrow()")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiCompiledType")))
 @interface BifrostApollo_apiCompiledType : BifrostBase
-- (BifrostApollo_apiCompiledNamedType *)leafType __attribute__((swift_name("leafType()"))) __attribute__((deprecated("Use rawType instead")));
-- (BifrostApollo_apiCompiledNamedType *)rawType __attribute__((swift_name("rawType()")));
-@end
+- (BifrostApollo_apiCompiledNamedType *)leafType __attribute__((swift_name("leafType()")));
+@end;
 
 __attribute__((swift_name("Apollo_apiCompiledNamedType")))
 @interface BifrostApollo_apiCompiledNamedType : BifrostApollo_apiCompiledType
-- (BifrostApollo_apiCompiledNamedType *)leafType __attribute__((swift_name("leafType()"))) __attribute__((deprecated("Use rawType instead")));
-- (BifrostApollo_apiCompiledNamedType *)rawType __attribute__((swift_name("rawType()")));
+- (BifrostApollo_apiCompiledNamedType *)leafType __attribute__((swift_name("leafType()")));
 @property (readonly, getter=name_) NSString *name __attribute__((swift_name("name")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiObjectType")))
@@ -2479,14 +2469,14 @@ __attribute__((swift_name("Apollo_apiObjectType")))
 @property (readonly) NSArray<NSString *> *embeddedFields __attribute__((swift_name("embeddedFields")));
 @property (readonly) NSArray<BifrostApollo_apiInterfaceType *> *implements __attribute__((swift_name("implements")));
 @property (readonly) NSArray<NSString *> *keyFields __attribute__((swift_name("keyFields")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiCustomScalarType")))
 @interface BifrostApollo_apiCustomScalarType : BifrostApollo_apiCompiledNamedType
 - (instancetype)initWithName:(NSString *)name className:(NSString *)className __attribute__((swift_name("init(name:className:)"))) __attribute__((objc_designated_initializer));
 @property (readonly) NSString *className __attribute__((swift_name("className")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinEnumCompanion")))
@@ -2495,7 +2485,7 @@ __attribute__((swift_name("KotlinEnumCompanion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostKotlinEnumCompanion *shared __attribute__((swift_name("shared")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinArray")))
@@ -2507,7 +2497,7 @@ __attribute__((swift_name("KotlinArray")))
 - (id<BifrostKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
 - (void)setIndex:(int32_t)index value:(T _Nullable)value __attribute__((swift_name("set(index:value:)")));
 @property (readonly) int32_t size __attribute__((swift_name("size")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiEnumType")))
@@ -2515,115 +2505,115 @@ __attribute__((swift_name("Apollo_apiEnumType")))
 - (instancetype)initWithName:(NSString *)name __attribute__((swift_name("init(name:)"))) __attribute__((objc_designated_initializer)) __attribute__((deprecated("Use the primary constructor instead")));
 - (instancetype)initWithName:(NSString *)name values:(NSArray<NSString *> *)values __attribute__((swift_name("init(name:values:)"))) __attribute__((objc_designated_initializer));
 @property (readonly) NSArray<NSString *> *values __attribute__((swift_name("values")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiJsonReader")))
 @protocol BifrostApollo_apiJsonReader <BifrostOkioCloseable>
 @required
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonReader> _Nullable)beginArrayAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("beginArray()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonReader> _Nullable)beginObjectAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("beginObject()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonReader> _Nullable)endArrayAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("endArray()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (id<BifrostApollo_apiJsonReader> _Nullable)endObjectAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("endObject()")));
 - (NSArray<id> *)getPath __attribute__((swift_name("getPath()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)hasNextAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("hasNext()"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)nextBooleanAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("nextBoolean()"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (double)nextDoubleAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("nextDouble()"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (int32_t)nextIntAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("nextInt()"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (int64_t)nextLongAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("nextLong()"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (NSString * _Nullable)nextNameAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("nextName()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostKotlinNothing * _Nullable)nextNullAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("nextNull()"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostApollo_apiJsonNumber * _Nullable)nextNumberAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("nextNumber()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (NSString * _Nullable)nextStringAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("nextString()"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BifrostApollo_apiJsonReaderToken * _Nullable)peekAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("peek()")));
 - (void)rewind __attribute__((swift_name("rewind()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (int32_t)selectNameNames:(NSArray<NSString *> *)names error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("selectName(names:)"))) __attribute__((swift_error(nonnull_error)));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)skipValueAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("skipValue()")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinNothing")))
 @interface BifrostKotlinNothing : BifrostBase
-@end
+@end;
 
 __attribute__((swift_name("KotlinRuntimeException")))
 @interface BifrostKotlinRuntimeException : BifrostKotlinException
@@ -2632,7 +2622,7 @@ __attribute__((swift_name("KotlinRuntimeException")))
 - (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithCause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
-@end
+@end;
 
 __attribute__((swift_name("KotlinIllegalStateException")))
 @interface BifrostKotlinIllegalStateException : BifrostKotlinRuntimeException
@@ -2641,13 +2631,8 @@ __attribute__((swift_name("KotlinIllegalStateException")))
 - (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithCause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
-@end
+@end;
 
-
-/**
- * @note annotations
- *   kotlin.SinceKotlin(version="1.4")
-*/
 __attribute__((swift_name("KotlinCancellationException")))
 @interface BifrostKotlinCancellationException : BifrostKotlinIllegalStateException
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
@@ -2655,37 +2640,32 @@ __attribute__((swift_name("KotlinCancellationException")))
 - (instancetype)initWithMessage:(NSString * _Nullable)message __attribute__((swift_name("init(message:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithMessage:(NSString * _Nullable)message cause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(message:cause:)"))) __attribute__((objc_designated_initializer));
 - (instancetype)initWithCause:(BifrostKotlinThrowable * _Nullable)cause __attribute__((swift_name("init(cause:)"))) __attribute__((objc_designated_initializer));
-@end
+@end;
 
 __attribute__((swift_name("Kotlinx_coroutines_coreFlowCollector")))
 @protocol BifrostKotlinx_coroutines_coreFlowCollector
 @required
 
 /**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (void)emitValue:(id _Nullable)value completionHandler:(void (^)(NSError * _Nullable))completionHandler __attribute__((swift_name("emit(value:completionHandler:)")));
-@end
+@end;
 
 __attribute__((swift_name("Kotlinx_coroutines_coreSharedFlow")))
 @protocol BifrostKotlinx_coroutines_coreSharedFlow <BifrostKotlinx_coroutines_coreFlow>
 @required
 @property (readonly) NSArray<id> *replayCache __attribute__((swift_name("replayCache")));
-@end
+@end;
 
 __attribute__((swift_name("Kotlinx_coroutines_coreMutableSharedFlow")))
 @protocol BifrostKotlinx_coroutines_coreMutableSharedFlow <BifrostKotlinx_coroutines_coreSharedFlow, BifrostKotlinx_coroutines_coreFlowCollector>
 @required
-
-/**
- * @note annotations
- *   kotlinx.coroutines.ExperimentalCoroutinesApi
-*/
 - (void)resetReplayCache __attribute__((swift_name("resetReplayCache()")));
 - (BOOL)tryEmitValue:(id _Nullable)value __attribute__((swift_name("tryEmit(value:)")));
 @property (readonly) id<BifrostKotlinx_coroutines_coreStateFlow> subscriptionCount __attribute__((swift_name("subscriptionCount")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreKoin")))
@@ -2722,33 +2702,28 @@ __attribute__((swift_name("Koin_coreKoin")))
 @property (readonly) BifrostKoin_coreLogger *logger __attribute__((swift_name("logger")));
 @property (readonly) BifrostKoin_corePropertyRegistry *propertyRegistry __attribute__((swift_name("propertyRegistry")));
 @property (readonly) BifrostKoin_coreScopeRegistry *scopeRegistry __attribute__((swift_name("scopeRegistry")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiHttpRequest")))
 @interface BifrostApollo_apiHttpRequest : BifrostBase
-
-/**
- * @note annotations
- *   kotlin.jvm.JvmOverloads
-*/
 - (BifrostApollo_apiHttpRequestBuilder *)doNewBuilderMethod:(BifrostApollo_apiHttpMethod *)method url:(NSString *)url __attribute__((swift_name("doNewBuilder(method:url:)")));
 @property (readonly) id<BifrostApollo_apiHttpBody> _Nullable body __attribute__((swift_name("body")));
 @property (readonly) NSArray<BifrostApollo_apiHttpHeader *> *headers __attribute__((swift_name("headers")));
 @property (readonly) BifrostApollo_apiHttpMethod *method __attribute__((swift_name("method")));
 @property (readonly) NSString *url __attribute__((swift_name("url")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_runtimeHttpInterceptorChain")))
 @protocol BifrostApollo_runtimeHttpInterceptorChain
 @required
 
 /**
- * @note This method converts instances of CancellationException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of CancellationException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (void)proceedRequest:(BifrostApollo_apiHttpRequest *)request completionHandler:(void (^)(BifrostApollo_apiHttpResponse * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("proceed(request:completionHandler:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiHttpResponse")))
@@ -2757,7 +2732,7 @@ __attribute__((swift_name("Apollo_apiHttpResponse")))
 @property (readonly) id<BifrostOkioBufferedSource> _Nullable body __attribute__((swift_name("body")));
 @property (readonly) NSArray<BifrostApollo_apiHttpHeader *> *headers __attribute__((swift_name("headers")));
 @property (readonly) int32_t statusCode __attribute__((swift_name("statusCode")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiApolloResponseBuilder")))
@@ -2769,7 +2744,7 @@ __attribute__((swift_name("Apollo_apiApolloResponseBuilder")))
 - (BifrostApollo_apiApolloResponseBuilder<D> *)extensionsExtensions:(NSDictionary<NSString *, id> * _Nullable)extensions __attribute__((swift_name("extensions(extensions:)")));
 - (BifrostApollo_apiApolloResponseBuilder<D> *)isLastIsLast:(BOOL)isLast __attribute__((swift_name("isLast(isLast:)")));
 - (BifrostApollo_apiApolloResponseBuilder<D> *)requestUuidRequestUuid:(BifrostUuidUuid *)requestUuid __attribute__((swift_name("requestUuid(requestUuid:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiError")))
@@ -2782,7 +2757,7 @@ __attribute__((swift_name("Apollo_apiError")))
 @property (readonly) NSString *message __attribute__((swift_name("message")));
 @property (readonly) NSDictionary<NSString *, id> * _Nullable nonStandardFields __attribute__((swift_name("nonStandardFields")));
 @property (readonly) NSArray<id> * _Nullable path __attribute__((swift_name("path")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("UuidUuid")))
@@ -2795,7 +2770,7 @@ __attribute__((swift_name("UuidUuid")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) int64_t leastSignificantBits __attribute__((swift_name("leastSignificantBits")));
 @property (readonly) int64_t mostSignificantBits __attribute__((swift_name("mostSignificantBits")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreKoinApplication")))
@@ -2813,7 +2788,7 @@ __attribute__((swift_name("Koin_coreKoinApplication")))
 - (void)unloadModulesModules:(NSArray<BifrostKoin_coreModule *> *)modules __attribute__((swift_name("unloadModules(modules:)")));
 - (void)unloadModulesModule:(BifrostKoin_coreModule *)module __attribute__((swift_name("unloadModules(module:)")));
 @property (readonly) BifrostKoin_coreKoin *koin __attribute__((swift_name("koin")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreModule")))
@@ -2832,14 +2807,14 @@ __attribute__((swift_name("Koin_coreModule")))
 @property (readonly) BifrostMutableSet<BifrostKoin_coreSingleInstanceFactory<id> *> *eagerInstances __attribute__((swift_name("eagerInstances")));
 @property (readonly) NSString *id __attribute__((swift_name("id")));
 @property (readonly) BOOL isLoaded __attribute__((swift_name("isLoaded")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiExecutableVariables")))
 @interface BifrostApollo_apiExecutableVariables : BifrostBase
 - (instancetype)initWithValueMap:(NSDictionary<NSString *, id> *)valueMap __attribute__((swift_name("init(valueMap:)"))) __attribute__((objc_designated_initializer));
 @property (readonly) NSDictionary<NSString *, id> *valueMap __attribute__((swift_name("valueMap")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiCompiledField.Builder")))
@@ -2853,22 +2828,17 @@ __attribute__((swift_name("Apollo_apiCompiledField.Builder")))
 - (BifrostApollo_apiCompiledFieldBuilder *)selectionsSelections:(NSArray<BifrostApollo_apiCompiledSelection *> *)selections __attribute__((swift_name("selections(selections:)")));
 @property (readonly) NSString *name __attribute__((swift_name("name")));
 @property (readonly) BifrostApollo_apiCompiledType *type __attribute__((swift_name("type")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiCompiledArgument")))
 @interface BifrostApollo_apiCompiledArgument : BifrostBase
 - (instancetype)initWithName:(NSString *)name value:(id _Nullable)value isKey:(BOOL)isKey __attribute__((swift_name("init(name:value:isKey:)"))) __attribute__((objc_designated_initializer)) __attribute__((deprecated("Use the Builder instead")));
 @property (readonly) BOOL isKey __attribute__((swift_name("isKey")));
-
-/**
- * @note annotations
- *   com.apollographql.apollo3.annotations.ApolloExperimental
-*/
 @property (readonly) BOOL isPagination __attribute__((swift_name("isPagination")));
 @property (readonly) NSString *name __attribute__((swift_name("name")));
 @property (readonly) id _Nullable value __attribute__((swift_name("value")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiCompiledCondition")))
@@ -2882,7 +2852,7 @@ __attribute__((swift_name("Apollo_apiCompiledCondition")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) BOOL inverted __attribute__((swift_name("inverted")));
 @property (readonly) NSString *name __attribute__((swift_name("name")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiUpload")))
 @protocol BifrostApollo_apiUpload
@@ -2891,19 +2861,19 @@ __attribute__((swift_name("Apollo_apiUpload")))
 @property (readonly) int64_t contentLength __attribute__((swift_name("contentLength")));
 @property (readonly) NSString *contentType __attribute__((swift_name("contentType")));
 @property (readonly) NSString * _Nullable fileName __attribute__((swift_name("fileName")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiJsonNumber")))
 @interface BifrostApollo_apiJsonNumber : BifrostBase
 - (instancetype)initWithValue:(NSString *)value __attribute__((swift_name("init(value:)"))) __attribute__((objc_designated_initializer));
 @property (readonly) NSString *value __attribute__((swift_name("value")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiExecutionContextKey")))
 @protocol BifrostApollo_apiExecutionContextKey
 @required
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiCustomScalarAdapters.Key")))
@@ -2913,13 +2883,8 @@ __attribute__((swift_name("Apollo_apiCustomScalarAdapters.Key")))
 + (instancetype)key __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostApollo_apiCustomScalarAdaptersKey *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostApollo_apiCustomScalarAdapters *Empty __attribute__((swift_name("Empty")));
-
-/**
- * @note annotations
- *   com.apollographql.apollo3.annotations.ApolloExperimental
-*/
 @property (readonly) BifrostApollo_apiCustomScalarAdapters *PassThrough __attribute__((swift_name("PassThrough")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiCustomScalarAdapters.Builder")))
@@ -2932,14 +2897,9 @@ __attribute__((swift_name("Apollo_apiCustomScalarAdapters.Builder")))
 - (BifrostApollo_apiCustomScalarAdaptersBuilder *)addAllCustomScalarAdapters:(BifrostApollo_apiCustomScalarAdapters *)customScalarAdapters __attribute__((swift_name("addAll(customScalarAdapters:)")));
 - (BifrostApollo_apiCustomScalarAdapters *)build __attribute__((swift_name("build()")));
 - (void)clear __attribute__((swift_name("clear()")));
-
-/**
- * @note annotations
- *   com.apollographql.apollo3.annotations.ApolloExperimental
-*/
 - (BifrostApollo_apiCustomScalarAdaptersBuilder *)unsafeUnsafe:(BOOL)unsafe __attribute__((swift_name("unsafe(unsafe:)")));
 - (BifrostApollo_apiCustomScalarAdaptersBuilder *)variablesVariables:(BifrostApollo_apiExecutableVariables *)variables __attribute__((swift_name("variables(variables:)"))) __attribute__((deprecated("Use AdapterContext.Builder.variables() instead")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiAdapterContext")))
@@ -2947,7 +2907,7 @@ __attribute__((swift_name("Apollo_apiAdapterContext")))
 - (BOOL)hasDeferredFragmentPath:(NSArray<id> *)path label:(NSString * _Nullable)label __attribute__((swift_name("hasDeferredFragment(path:label:)")));
 - (BifrostApollo_apiAdapterContextBuilder *)doNewBuilder __attribute__((swift_name("doNewBuilder()")));
 - (NSSet<NSString *> *)variables __attribute__((swift_name("variables()")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiOptionalCompanion")))
@@ -2956,25 +2916,10 @@ __attribute__((swift_name("Apollo_apiOptionalCompanion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostApollo_apiOptionalCompanion *shared __attribute__((swift_name("shared")));
-
-/**
- * @note annotations
- *   kotlin.jvm.JvmStatic
-*/
 - (BifrostApollo_apiOptional<id> *)absent __attribute__((swift_name("absent()")));
-
-/**
- * @note annotations
- *   kotlin.jvm.JvmStatic
-*/
 - (BifrostApollo_apiOptional<id> *)presentValue:(id _Nullable)value __attribute__((swift_name("present(value:)")));
-
-/**
- * @note annotations
- *   kotlin.jvm.JvmStatic
-*/
 - (BifrostApollo_apiOptional<id> *)presentIfNotNullValue:(id _Nullable)value __attribute__((swift_name("presentIfNotNull(value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiInterfaceType")))
@@ -2984,7 +2929,7 @@ __attribute__((swift_name("Apollo_apiInterfaceType")))
 @property (readonly) NSArray<NSString *> *embeddedFields __attribute__((swift_name("embeddedFields")));
 @property (readonly) NSArray<BifrostApollo_apiInterfaceType *> *implements __attribute__((swift_name("implements")));
 @property (readonly) NSArray<NSString *> *keyFields __attribute__((swift_name("keyFields")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiObjectType.Builder")))
@@ -2995,14 +2940,14 @@ __attribute__((swift_name("Apollo_apiObjectType.Builder")))
 - (BifrostApollo_apiObjectTypeBuilder *)embeddedFieldsEmbeddedFields:(NSArray<NSString *> *)embeddedFields __attribute__((swift_name("embeddedFields(embeddedFields:)")));
 - (BifrostApollo_apiObjectTypeBuilder *)interfacesImplements:(NSArray<BifrostApollo_apiInterfaceType *> *)implements __attribute__((swift_name("interfaces(implements:)")));
 - (BifrostApollo_apiObjectTypeBuilder *)keyFieldsKeyFields:(NSArray<NSString *> *)keyFields __attribute__((swift_name("keyFields(keyFields:)")));
-@end
+@end;
 
 __attribute__((swift_name("KotlinIterator")))
 @protocol BifrostKotlinIterator
 @required
 - (BOOL)hasNext __attribute__((swift_name("hasNext_()")));
 - (id _Nullable)next __attribute__((swift_name("next()")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiJsonReaderToken")))
@@ -3023,19 +2968,19 @@ __attribute__((swift_name("Apollo_apiJsonReaderToken")))
 @property (class, readonly) BifrostApollo_apiJsonReaderToken *endDocument __attribute__((swift_name("endDocument")));
 @property (class, readonly) BifrostApollo_apiJsonReaderToken *any __attribute__((swift_name("any")));
 + (BifrostKotlinArray<BifrostApollo_apiJsonReaderToken *> *)values __attribute__((swift_name("values()")));
-@end
+@end;
 
 __attribute__((swift_name("Kotlinx_coroutines_coreStateFlow")))
 @protocol BifrostKotlinx_coroutines_coreStateFlow <BifrostKotlinx_coroutines_coreSharedFlow>
 @required
 @property (readonly) id _Nullable value __attribute__((swift_name("value")));
-@end
+@end;
 
 __attribute__((swift_name("Koin_coreLockable")))
 @interface BifrostKoin_coreLockable : BifrostBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreScope")))
@@ -3077,53 +3022,43 @@ __attribute__((swift_name("Koin_coreScope")))
 @property (readonly) BOOL isRoot __attribute__((swift_name("isRoot")));
 @property (readonly) BifrostKoin_coreLogger *logger __attribute__((swift_name("logger")));
 @property (readonly) id<BifrostKoin_coreQualifier> scopeQualifier __attribute__((swift_name("scopeQualifier")));
-@end
+@end;
 
 __attribute__((swift_name("Koin_coreKoinScopeComponent")))
 @protocol BifrostKoin_coreKoinScopeComponent <BifrostKoin_coreKoinComponent>
 @required
 - (void)closeScope __attribute__((swift_name("closeScope()")));
 @property (readonly) BifrostKoin_coreScope *scope __attribute__((swift_name("scope")));
-@end
+@end;
 
 __attribute__((swift_name("Koin_coreQualifier")))
 @protocol BifrostKoin_coreQualifier
 @required
 @property (readonly) NSString *value __attribute__((swift_name("value")));
-@end
+@end;
 
 __attribute__((swift_name("KotlinKDeclarationContainer")))
 @protocol BifrostKotlinKDeclarationContainer
 @required
-@end
+@end;
 
 __attribute__((swift_name("KotlinKAnnotatedElement")))
 @protocol BifrostKotlinKAnnotatedElement
 @required
-@end
+@end;
 
-
-/**
- * @note annotations
- *   kotlin.SinceKotlin(version="1.1")
-*/
 __attribute__((swift_name("KotlinKClassifier")))
 @protocol BifrostKotlinKClassifier
 @required
-@end
+@end;
 
 __attribute__((swift_name("KotlinKClass")))
 @protocol BifrostKotlinKClass <BifrostKotlinKDeclarationContainer, BifrostKotlinKAnnotatedElement, BifrostKotlinKClassifier>
 @required
-
-/**
- * @note annotations
- *   kotlin.SinceKotlin(version="1.1")
-*/
 - (BOOL)isInstanceValue:(id _Nullable)value __attribute__((swift_name("isInstance(value:)")));
 @property (readonly) NSString * _Nullable qualifiedName __attribute__((swift_name("qualifiedName")));
 @property (readonly) NSString * _Nullable simpleName __attribute__((swift_name("simpleName")));
-@end
+@end;
 
 __attribute__((swift_name("Koin_coreParametersHolder")))
 @interface BifrostKoin_coreParametersHolder : BifrostBase
@@ -3147,14 +3082,14 @@ __attribute__((swift_name("Koin_coreParametersHolder")))
 - (int32_t)size __attribute__((swift_name("size()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSArray<id> *values __attribute__((swift_name("values")));
-@end
+@end;
 
 __attribute__((swift_name("KotlinLazy")))
 @protocol BifrostKotlinLazy
 @required
 - (BOOL)isInitialized __attribute__((swift_name("isInitialized()")));
 @property (readonly) id _Nullable value __attribute__((swift_name("value")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinLazyThreadSafetyMode")))
@@ -3166,7 +3101,7 @@ __attribute__((swift_name("KotlinLazyThreadSafetyMode")))
 @property (class, readonly) BifrostKotlinLazyThreadSafetyMode *publication __attribute__((swift_name("publication")));
 @property (class, readonly) BifrostKotlinLazyThreadSafetyMode *none __attribute__((swift_name("none")));
 + (BifrostKotlinArray<BifrostKotlinLazyThreadSafetyMode *> *)values __attribute__((swift_name("values()")));
-@end
+@end;
 
 __attribute__((swift_name("Koin_coreLogger")))
 @interface BifrostKoin_coreLogger : BifrostBase
@@ -3178,7 +3113,7 @@ __attribute__((swift_name("Koin_coreLogger")))
 - (void)logLvl:(BifrostKoin_coreLevel *)lvl msg:(NSString *(^)(void))msg __attribute__((swift_name("log(lvl:msg:)")));
 - (void)logLevel:(BifrostKoin_coreLevel *)level msg:(NSString *)msg __attribute__((swift_name("log(level:msg:)")));
 @property BifrostKoin_coreLevel *level __attribute__((swift_name("level")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreInstanceRegistry")))
@@ -3188,7 +3123,7 @@ __attribute__((swift_name("Koin_coreInstanceRegistry")))
 - (int32_t)size __attribute__((swift_name("size()")));
 @property (readonly) BifrostKoin_coreKoin *_koin __attribute__((swift_name("_koin")));
 @property (readonly) NSDictionary<NSString *, BifrostKoin_coreInstanceFactory<id> *> *instances __attribute__((swift_name("instances")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_corePropertyRegistry")))
@@ -3198,7 +3133,7 @@ __attribute__((swift_name("Koin_corePropertyRegistry")))
 - (void)deletePropertyKey:(NSString *)key __attribute__((swift_name("deleteProperty(key:)")));
 - (id _Nullable)getPropertyKey:(NSString *)key __attribute__((swift_name("getProperty(key:)")));
 - (void)savePropertiesProperties:(NSDictionary<NSString *, id> *)properties __attribute__((swift_name("saveProperties(properties:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreScopeRegistry")))
@@ -3208,7 +3143,7 @@ __attribute__((swift_name("Koin_coreScopeRegistry")))
 - (void)loadScopesModules:(NSSet<BifrostKoin_coreModule *> *)modules __attribute__((swift_name("loadScopes(modules:)")));
 @property (readonly) BifrostKoin_coreScope *rootScope __attribute__((swift_name("rootScope")));
 @property (readonly) NSSet<id<BifrostKoin_coreQualifier>> *scopeDefinitions __attribute__((swift_name("scopeDefinitions")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiHttpRequest.Builder")))
@@ -3219,7 +3154,7 @@ __attribute__((swift_name("Apollo_apiHttpRequest.Builder")))
 - (BifrostApollo_apiHttpRequestBuilder *)bodyBody:(id<BifrostApollo_apiHttpBody>)body __attribute__((swift_name("body(body:)")));
 - (BifrostApollo_apiHttpRequest *)build __attribute__((swift_name("build()")));
 - (BifrostApollo_apiHttpRequestBuilder *)headersHeaders:(NSArray<BifrostApollo_apiHttpHeader *> *)headers __attribute__((swift_name("headers(headers:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiHttpMethod")))
@@ -3230,7 +3165,7 @@ __attribute__((swift_name("Apollo_apiHttpMethod")))
 @property (class, readonly) BifrostApollo_apiHttpMethod *get __attribute__((swift_name("get")));
 @property (class, readonly) BifrostApollo_apiHttpMethod *post __attribute__((swift_name("post")));
 + (BifrostKotlinArray<BifrostApollo_apiHttpMethod *> *)values __attribute__((swift_name("values()")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiHttpBody")))
 @protocol BifrostApollo_apiHttpBody
@@ -3238,7 +3173,7 @@ __attribute__((swift_name("Apollo_apiHttpBody")))
 - (void)writeToBufferedSink:(id<BifrostOkioBufferedSink>)bufferedSink __attribute__((swift_name("writeTo(bufferedSink:)")));
 @property (readonly) int64_t contentLength __attribute__((swift_name("contentLength")));
 @property (readonly) NSString *contentType __attribute__((swift_name("contentType")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiHttpHeader")))
@@ -3252,7 +3187,7 @@ __attribute__((swift_name("Apollo_apiHttpHeader")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString *name __attribute__((swift_name("name")));
 @property (readonly) NSString *value __attribute__((swift_name("value")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiHttpResponse.Builder")))
@@ -3265,19 +3200,19 @@ __attribute__((swift_name("Apollo_apiHttpResponse.Builder")))
 - (BifrostApollo_apiHttpResponse *)build __attribute__((swift_name("build()")));
 - (BifrostApollo_apiHttpResponseBuilder *)headersHeaders:(NSArray<BifrostApollo_apiHttpHeader *> *)headers __attribute__((swift_name("headers(headers:)")));
 @property (readonly) int32_t statusCode __attribute__((swift_name("statusCode")));
-@end
+@end;
 
 __attribute__((swift_name("OkioSource")))
 @protocol BifrostOkioSource <BifrostOkioCloseable>
 @required
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (int64_t)readSink:(BifrostOkioBuffer *)sink byteCount:(int64_t)byteCount error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("read(sink:byteCount:)"))) __attribute__((swift_error(nonnull_error)));
 - (BifrostOkioTimeout *)timeout __attribute__((swift_name("timeout()")));
-@end
+@end;
 
 __attribute__((swift_name("OkioBufferedSource")))
 @protocol BifrostOkioBufferedSource <BifrostOkioSource>
@@ -3322,7 +3257,7 @@ __attribute__((swift_name("OkioBufferedSource")))
 - (int32_t)selectOptions:(NSArray<BifrostOkioByteString *> *)options __attribute__((swift_name("select(options:)")));
 - (void)skipByteCount:(int64_t)byteCount __attribute__((swift_name("skip(byteCount:)")));
 @property (readonly) BifrostOkioBuffer *buffer __attribute__((swift_name("buffer")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiError.Location")))
@@ -3331,7 +3266,7 @@ __attribute__((swift_name("Apollo_apiError.Location")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) int32_t column __attribute__((swift_name("column")));
 @property (readonly) int32_t line __attribute__((swift_name("line")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinByteArray")))
@@ -3344,7 +3279,7 @@ __attribute__((swift_name("KotlinByteArray")))
 - (BifrostKotlinByteIterator *)iterator __attribute__((swift_name("iterator()")));
 - (void)setIndex:(int32_t)index value:(int8_t)value __attribute__((swift_name("set(index:value:)")));
 @property (readonly) int32_t size __attribute__((swift_name("size")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreKoinApplication.Companion")))
@@ -3354,7 +3289,7 @@ __attribute__((swift_name("Koin_coreKoinApplication.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostKoin_coreKoinApplicationCompanion *shared __attribute__((swift_name("shared")));
 - (BifrostKoin_coreKoinApplication *)doInit __attribute__((swift_name("doInit()")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreLevel")))
@@ -3367,7 +3302,7 @@ __attribute__((swift_name("Koin_coreLevel")))
 @property (class, readonly) BifrostKoin_coreLevel *error __attribute__((swift_name("error")));
 @property (class, readonly) BifrostKoin_coreLevel *none __attribute__((swift_name("none")));
 + (BifrostKotlinArray<BifrostKoin_coreLevel *> *)values __attribute__((swift_name("values()")));
-@end
+@end;
 
 __attribute__((swift_name("Koin_coreInstanceFactory")))
 @interface BifrostKoin_coreInstanceFactory<T> : BifrostKoin_coreLockable
@@ -3381,7 +3316,7 @@ __attribute__((swift_name("Koin_coreInstanceFactory")))
 - (T _Nullable)getContext:(BifrostKoin_coreInstanceContext *)context __attribute__((swift_name("get(context:)")));
 - (BOOL)isCreatedContext:(BifrostKoin_coreInstanceContext * _Nullable)context __attribute__((swift_name("isCreated(context:)")));
 @property (readonly) BifrostKoin_coreBeanDefinition<T> *beanDefinition __attribute__((swift_name("beanDefinition")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("KotlinPair")))
@@ -3395,7 +3330,7 @@ __attribute__((swift_name("KotlinPair")))
 - (NSString *)toString __attribute__((swift_name("toString()")));
 @property (readonly) A _Nullable first __attribute__((swift_name("first")));
 @property (readonly) B _Nullable second __attribute__((swift_name("second")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreScopeDSL")))
@@ -3406,7 +3341,7 @@ __attribute__((swift_name("Koin_coreScopeDSL")))
 - (BifrostKotlinPair<BifrostKoin_coreModule *, BifrostKoin_coreInstanceFactory<id> *> *)singleQualifier:(id<BifrostKoin_coreQualifier> _Nullable)qualifier definition:(id _Nullable (^)(BifrostKoin_coreScope *, BifrostKoin_coreParametersHolder *))definition __attribute__((swift_name("single(qualifier:definition:)"))) __attribute__((unavailable("Can't use Single in a scope. Use Scoped instead")));
 @property (readonly) BifrostKoin_coreModule *module __attribute__((swift_name("module")));
 @property (readonly) id<BifrostKoin_coreQualifier> scopeQualifier __attribute__((swift_name("scopeQualifier")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreSingleInstanceFactory")))
@@ -3417,25 +3352,25 @@ __attribute__((swift_name("Koin_coreSingleInstanceFactory")))
 - (void)dropAll __attribute__((swift_name("dropAll()")));
 - (T _Nullable)getContext:(BifrostKoin_coreInstanceContext *)context __attribute__((swift_name("get(context:)")));
 - (BOOL)isCreatedContext:(BifrostKoin_coreInstanceContext * _Nullable)context __attribute__((swift_name("isCreated(context:)")));
-@end
+@end;
 
 __attribute__((swift_name("OkioSink")))
 @protocol BifrostOkioSink <BifrostOkioCloseable>
 @required
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)flushAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("flush()")));
 - (BifrostOkioTimeout *)timeout __attribute__((swift_name("timeout()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)writeSource:(BifrostOkioBuffer *)source byteCount:(int64_t)byteCount error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("write(source:byteCount_:)")));
-@end
+@end;
 
 __attribute__((swift_name("OkioBufferedSink")))
 @protocol BifrostOkioBufferedSink <BifrostOkioSink>
@@ -3461,14 +3396,14 @@ __attribute__((swift_name("OkioBufferedSink")))
 - (id<BifrostOkioBufferedSink>)writeUtf8String:(NSString *)string beginIndex:(int32_t)beginIndex endIndex:(int32_t)endIndex __attribute__((swift_name("writeUtf8(string:beginIndex:endIndex:)")));
 - (id<BifrostOkioBufferedSink>)writeUtf8CodePointCodePoint:(int32_t)codePoint __attribute__((swift_name("writeUtf8CodePoint(codePoint:)")));
 @property (readonly) BifrostOkioBuffer *buffer __attribute__((swift_name("buffer")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiCustomTypeAdapter")))
 @protocol BifrostApollo_apiCustomTypeAdapter
 @required
 - (id _Nullable)decodeValue:(BifrostApollo_apiCustomTypeValue<id> *)value __attribute__((swift_name("decode(value:)")));
 - (BifrostApollo_apiCustomTypeValue<id> *)encodeValue:(id _Nullable)value __attribute__((swift_name("encode(value:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiAdapterContext.Builder")))
@@ -3478,7 +3413,7 @@ __attribute__((swift_name("Apollo_apiAdapterContext.Builder")))
 - (BifrostApollo_apiAdapterContext *)build __attribute__((swift_name("build()")));
 - (BifrostApollo_apiAdapterContextBuilder *)mergedDeferredFragmentIdsMergedDeferredFragmentIds:(NSSet<BifrostApollo_apiDeferredFragmentIdentifier *> * _Nullable)mergedDeferredFragmentIds __attribute__((swift_name("mergedDeferredFragmentIds(mergedDeferredFragmentIds:)")));
 - (BifrostApollo_apiAdapterContextBuilder *)variablesVariables:(BifrostApollo_apiExecutableVariables * _Nullable)variables __attribute__((swift_name("variables(variables:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiInterfaceType.Builder")))
@@ -3489,13 +3424,13 @@ __attribute__((swift_name("Apollo_apiInterfaceType.Builder")))
 - (BifrostApollo_apiInterfaceTypeBuilder *)embeddedFieldsEmbeddedFields:(NSArray<NSString *> *)embeddedFields __attribute__((swift_name("embeddedFields(embeddedFields:)")));
 - (BifrostApollo_apiInterfaceTypeBuilder *)interfacesImplements:(NSArray<BifrostApollo_apiInterfaceType *> *)implements __attribute__((swift_name("interfaces(implements:)")));
 - (BifrostApollo_apiInterfaceTypeBuilder *)keyFieldsKeyFields:(NSArray<NSString *> *)keyFields __attribute__((swift_name("keyFields(keyFields:)")));
-@end
+@end;
 
 __attribute__((swift_name("Koin_coreScopeCallback")))
 @protocol BifrostKoin_coreScopeCallback
 @required
 - (void)onScopeCloseScope:(BifrostKoin_coreScope *)scope __attribute__((swift_name("onScopeClose(scope:)")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreParametersHolder.Companion")))
@@ -3505,7 +3440,7 @@ __attribute__((swift_name("Koin_coreParametersHolder.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostKoin_coreParametersHolderCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) int32_t MAX_PARAMS __attribute__((swift_name("MAX_PARAMS")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreScopeRegistry.Companion")))
@@ -3514,7 +3449,7 @@ __attribute__((swift_name("Koin_coreScopeRegistry.Companion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostKoin_coreScopeRegistryCompanion *shared __attribute__((swift_name("shared")));
-@end
+@end;
 
 __attribute__((swift_name("OkioByteString")))
 @interface BifrostOkioByteString : BifrostBase <BifrostKotlinComparable>
@@ -3551,7 +3486,7 @@ __attribute__((swift_name("OkioByteString")))
 - (NSString *)description __attribute__((swift_name("description()")));
 - (NSString *)utf8 __attribute__((swift_name("utf8()")));
 @property (readonly) int32_t size __attribute__((swift_name("size")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("OkioBuffer")))
@@ -3561,8 +3496,8 @@ __attribute__((swift_name("OkioBuffer")))
 - (void)clear __attribute__((swift_name("clear()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)closeAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("close()")));
 - (int64_t)completeSegmentByteCount __attribute__((swift_name("completeSegmentByteCount()")));
@@ -3575,8 +3510,8 @@ __attribute__((swift_name("OkioBuffer")))
 - (BOOL)exhausted __attribute__((swift_name("exhausted()")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)flushAndReturnError:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("flush()")));
 - (int8_t)getPos:(int64_t)pos __attribute__((swift_name("get(pos:)")));
@@ -3599,8 +3534,8 @@ __attribute__((swift_name("OkioBuffer")))
 - (int32_t)readSink:(BifrostKotlinByteArray *)sink offset:(int32_t)offset byteCount:(int32_t)byteCount __attribute__((swift_name("read(sink:offset:byteCount:)")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (int64_t)readSink:(BifrostOkioBuffer *)sink byteCount:(int64_t)byteCount error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("read(sink:byteCount:)"))) __attribute__((swift_error(nonnull_error)));
 - (int64_t)readAllSink:(id<BifrostOkioSink>)sink __attribute__((swift_name("readAll(sink:)")));
@@ -3642,8 +3577,8 @@ __attribute__((swift_name("OkioBuffer")))
 - (BifrostOkioBuffer *)writeSource:(BifrostKotlinByteArray *)source offset:(int32_t)offset byteCount:(int32_t)byteCount __attribute__((swift_name("write(source:offset:byteCount:)")));
 
 /**
- * @note This method converts instances of IOException to errors.
- * Other uncaught Kotlin exceptions are fatal.
+ @note This method converts instances of IOException to errors.
+ Other uncaught Kotlin exceptions are fatal.
 */
 - (BOOL)writeSource:(BifrostOkioBuffer *)source byteCount:(int64_t)byteCount error:(NSError * _Nullable * _Nullable)error __attribute__((swift_name("write(source:byteCount_:)")));
 - (BifrostOkioBuffer *)writeByteString:(BifrostOkioByteString *)byteString __attribute__((swift_name("write(byteString:)")));
@@ -3664,14 +3599,14 @@ __attribute__((swift_name("OkioBuffer")))
 - (BifrostOkioBuffer *)writeUtf8CodePointCodePoint:(int32_t)codePoint __attribute__((swift_name("writeUtf8CodePoint(codePoint:)")));
 @property (readonly) BifrostOkioBuffer *buffer __attribute__((swift_name("buffer")));
 @property (readonly) int64_t size __attribute__((swift_name("size")));
-@end
+@end;
 
 __attribute__((swift_name("OkioTimeout")))
 @interface BifrostOkioTimeout : BifrostBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 @property (class, readonly, getter=companion) BifrostOkioTimeoutCompanion *companion __attribute__((swift_name("companion")));
-@end
+@end;
 
 __attribute__((swift_name("KotlinByteIterator")))
 @interface BifrostKotlinByteIterator : BifrostBase <BifrostKotlinIterator>
@@ -3679,7 +3614,7 @@ __attribute__((swift_name("KotlinByteIterator")))
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (BifrostByte *)next __attribute__((swift_name("next()")));
 - (int8_t)nextByte __attribute__((swift_name("nextByte()")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreBeanDefinition")))
@@ -3704,7 +3639,7 @@ __attribute__((swift_name("Koin_coreBeanDefinition")))
 @property id<BifrostKoin_coreQualifier> _Nullable qualifier __attribute__((swift_name("qualifier")));
 @property (readonly) id<BifrostKoin_coreQualifier> scopeQualifier __attribute__((swift_name("scopeQualifier")));
 @property NSArray<id<BifrostKotlinKClass>> *secondaryTypes __attribute__((swift_name("secondaryTypes")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreInstanceFactoryCompanion")))
@@ -3714,7 +3649,7 @@ __attribute__((swift_name("Koin_coreInstanceFactoryCompanion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostKoin_coreInstanceFactoryCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) NSString *ERROR_SEPARATOR __attribute__((swift_name("ERROR_SEPARATOR")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreInstanceContext")))
@@ -3723,13 +3658,13 @@ __attribute__((swift_name("Koin_coreInstanceContext")))
 @property (readonly) BifrostKoin_coreKoin *koin __attribute__((swift_name("koin")));
 @property (readonly) BifrostKoin_coreParametersHolder * _Nullable parameters __attribute__((swift_name("parameters")));
 @property (readonly) BifrostKoin_coreScope *scope __attribute__((swift_name("scope")));
-@end
+@end;
 
 __attribute__((swift_name("Apollo_apiCustomTypeValue")))
 @interface BifrostApollo_apiCustomTypeValue<T> : BifrostBase
 @property (class, readonly, getter=companion) BifrostApollo_apiCustomTypeValueCompanion *companion __attribute__((swift_name("companion")));
 @property (readonly) T _Nullable value __attribute__((swift_name("value")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiDeferredFragmentIdentifier")))
@@ -3743,7 +3678,7 @@ __attribute__((swift_name("Apollo_apiDeferredFragmentIdentifier")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) NSString * _Nullable label __attribute__((swift_name("label")));
 @property (readonly) NSArray<id> *path __attribute__((swift_name("path")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("OkioByteString.Companion")))
@@ -3758,7 +3693,7 @@ __attribute__((swift_name("OkioByteString.Companion")))
 - (BifrostOkioByteString *)encodeUtf8:(NSString *)receiver __attribute__((swift_name("encodeUtf8(_:)")));
 - (BifrostOkioByteString *)toByteString:(BifrostKotlinByteArray *)receiver offset:(int32_t)offset byteCount:(int32_t)byteCount __attribute__((swift_name("toByteString(_:offset:byteCount:)")));
 @property (readonly) BifrostOkioByteString *EMPTY __attribute__((swift_name("EMPTY")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("OkioBuffer.UnsafeCursor")))
@@ -3776,7 +3711,7 @@ __attribute__((swift_name("OkioBuffer.UnsafeCursor")))
 @property int64_t offset __attribute__((swift_name("offset")));
 @property BOOL readWrite __attribute__((swift_name("readWrite")));
 @property int32_t start __attribute__((swift_name("start")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("OkioTimeout.Companion")))
@@ -3786,7 +3721,7 @@ __attribute__((swift_name("OkioTimeout.Companion")))
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostOkioTimeoutCompanion *shared __attribute__((swift_name("shared")));
 @property (readonly) BifrostOkioTimeout *NONE __attribute__((swift_name("NONE")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreKind")))
@@ -3798,7 +3733,7 @@ __attribute__((swift_name("Koin_coreKind")))
 @property (class, readonly) BifrostKoin_coreKind *factory __attribute__((swift_name("factory")));
 @property (class, readonly) BifrostKoin_coreKind *scoped __attribute__((swift_name("scoped")));
 + (BifrostKotlinArray<BifrostKoin_coreKind *> *)values __attribute__((swift_name("values()")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Koin_coreCallbacks")))
@@ -3810,7 +3745,7 @@ __attribute__((swift_name("Koin_coreCallbacks")))
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) void (^ _Nullable onClose)(T _Nullable) __attribute__((swift_name("onClose")));
-@end
+@end;
 
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Apollo_apiCustomTypeValueCompanion")))
@@ -3819,13 +3754,8 @@ __attribute__((swift_name("Apollo_apiCustomTypeValueCompanion")))
 + (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
 + (instancetype)companion __attribute__((swift_name("init()")));
 @property (class, readonly, getter=shared) BifrostApollo_apiCustomTypeValueCompanion *shared __attribute__((swift_name("shared")));
-
-/**
- * @note annotations
- *   kotlin.jvm.JvmStatic
-*/
 - (BifrostApollo_apiCustomTypeValue<id> *)fromRawValueValue:(id _Nullable)value __attribute__((swift_name("fromRawValue(value:)")));
-@end
+@end;
 
 #pragma pop_macro("_Nullable_result")
 #pragma clang diagnostic pop
